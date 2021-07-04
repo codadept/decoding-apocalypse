@@ -1,0 +1,26 @@
+{
+  "name": "decoding-apocalypse",
+  "version": "1.0.0",
+  "description": "HackRx - Annual Hackathon hosted by Bajaj Finserv",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codadept/decoding-apocalypse.git"
+  },
+  "keywords": [
+    "hackathon"
+  ],
+  "author": "codadept",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/codadept/decoding-apocalypse/issues"
+  },
+  "homepage": "https://github.com/codadept/decoding-apocalypse#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1"
+  }
+}
