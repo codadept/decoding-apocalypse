@@ -1,9 +1,11 @@
 const   express     = require('express'),
         app         = express(),
+        ejsMate     = require('ejs-mate'),
         path        = require('path'),
         PORT        = process.env.PORT || 3000;
 
 
+app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs');
 app.set('views',path.join(__dirname,'views'));
 
@@ -14,7 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('*', (req,res) => {
-    res.send('Error');
+    res.render('error');
 });
 
 app.listen(PORT, () => {
