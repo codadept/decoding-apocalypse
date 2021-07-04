@@ -11,12 +11,12 @@ app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/', (req, res) => {
     res.render('home');
-})
+});
 
 app.get('*', (req,res) => {
     res.send('Error');
-})
+});
 
 app.listen(PORT, () => {
     console.log(`THE SERVER IS RUNNING ON PORT ${PORT}`);
-})
+});

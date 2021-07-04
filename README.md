@@ -18,3 +18,8 @@ npm start
 ```
 visit: localhost:3000/ in your web browser
 ```
+
+### Github branches names:
+```	
+XX_DDMMYY_OO    eg.   VS_050721_01
+```
