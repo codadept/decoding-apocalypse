@@ -26,9 +26,12 @@
 }
 /* ! </NAVBAR> */
 
+/* SPECIALIST SECTION STYLING */
+
 .middle{
     margin:30px;
     box-sizing: border-box;
+    position: relative;
 }
 .table{
     float: left;
@@ -84,4 +87,59 @@ a{
     text-decoration: none;
     color: black;
     font-weight: bold;
+}
+
+#scrollmenu{
+    scroll-behavior: smooth;
+}
+
+#leftscroll{
+    left: 1%;
+}
+
+#rightscroll{
+    right: 1%;
+}
+
+.scrollBtn{
+    position: absolute;
+    top: 58%;
+    border: none;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 0.8rem 1rem;
+    background-color: white;
+    transition: all 0.1s ease-in 0s;
+}
+
+.scrollBtn:hover{
+    box-shadow: 2px 4px 4px rgb(151, 151, 151);
+    transform: scale(1.1);
+}
+
+/* DOCTORS SPECIALIZATION SECTION */
+
+*,*::after,*::before
+{
+    padding: 0px;
+    margin: 0px;
+}
+main{
+ 
+    background-color: rgb(243, 232, 234);
+
+}
+
+.card
+{   font-family: Camphor,sans-serif;
+    position: relative;
+    border: 10px;
+    margin: 10px;
+}
+
+.row
+{   font-family: Camphor,sans-serif;
+    position: relative;
+    padding: 50px;
+    border: 10px;
 }
