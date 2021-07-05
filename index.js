@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
     res.render('home');
 });
 
+app.get('/doctor', (req, res) => {
+    res.render('doctor');
+});
+
 app.get('*', (req,res) => {
     res.render('error');
 });

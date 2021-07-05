@@ -1,3 +1,4 @@
+
 /* SPECIALIST SECTION STYLING */
 
 .middle{
@@ -89,3 +90,29 @@ a{
     transform: scale(1.1);
 }
 
+/* DOCTORS SPECIALIZATION SECTION */
+
+*,*::after,*::before
+{
+    padding: 0px;
+    margin: 0px;
+}
+main{
+ 
+    background-color: rgb(243, 232, 234);
+
+}
+
+.card
+{   font-family: Camphor,sans-serif;
+    position: relative;
+    border: 10px;
+    margin: 10px;
+}
+
+.row
+{   font-family: Camphor,sans-serif;
+    position: relative;
+    padding: 50px;
+    border: 10px;
+}
