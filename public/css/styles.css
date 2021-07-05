@@ -1,3 +1,30 @@
+/* ! <NAVBAR> */
+.nav-item {
+    position: relative;
+}
+
+.hover-anim::before {
+    position: absolute;
+    content: "";
+    background-color: rgb(224, 83, 106);
+    height: 3px;
+    left: 50%;
+    width: 4.5%;
+    transform: translate(-50%, 0) scaleX(0);
+    bottom: 3px;
+    transition: 0.3s;
+}
+
+.hover-anim:hover::before {
+    width: 90%;
+    transform: translate(-50%, 0) scaleX(1);
+}
+
+#log-sign-bts {
+    position: absolute;
+    right: 10%;
+}
+/* ! </NAVBAR> */
 
 .middle{
     margin:30px;
