@@ -1,6 +1,6 @@
-const item = document.getElementById("scroolmenu");
-const rightscrool = document.getElementById("rightscrool");
-const leftscrool = document.getElementById("leftscrool");
+const item = document.getElementById("scrollmenu");
+const rightscroll = document.getElementById("rightscroll");
+const leftscroll = document.getElementById("leftscroll");
 
 item.addEventListener("wheel", function (e) {
     e.preventDefault();
@@ -10,9 +10,9 @@ item.addEventListener("wheel", function (e) {
     }
     else { item.scrollLeft -= 210; }
 });
-leftscrool.addEventListener("click", function (e) {
+leftscroll.addEventListener("click", function (e) {
     item.scrollLeft -= 210;
 });
-rightscrool.addEventListener("click", function (e) {
+rightscroll.addEventListener("click", function (e) {
     item.scrollLeft += 210;
 });
