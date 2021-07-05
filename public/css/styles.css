@@ -114,7 +114,12 @@ a{
 }
 
 /* FOOTER STYLING */
+
 footer
 {
-    /* background-color: #3FC1C9; */
+    background-image: url(/img/footer.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 360px;
 }
