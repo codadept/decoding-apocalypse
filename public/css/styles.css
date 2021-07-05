@@ -133,13 +133,9 @@
 {
     padding: 0px;
     margin: 0px;
+    /* background-color: rgb(243, 232, 234); */
 }
-main{
  
-    background-color: rgb(243, 232, 234);
-
-}
-
 .card
 {   font-family: Camphor,sans-serif;
     position: relative;
@@ -152,4 +148,15 @@ main{
     position: relative;
     padding: 50px;
     border: 10px;
+}
+
+/* FOOTER STYLING */
+
+footer
+{
+    background-image: url(/img/footer.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 360px;
 }
