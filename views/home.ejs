@@ -1,35 +1,103 @@
-<% layout('layouts/boilerplate') %> 
-<!-- Jumbotron -->
-<div class="container-fluid bg-dark text-light p-5">
-    <div class="container bg-dark p-5">
-        <h1 class="display-4">Welcome to TeleMedico</h1>
-        <hr>
-        <p>Our team's website for HackRx annual hackathon hosted by Bajaj Finserv. </p>
-        <a href="#" class="btn btn-primary">Check doctor's availability</a>
-    </div>
-</div>
-
-<!-- Specialities section -->
-<div class="middle">
-    <h2 id="letter">25+ Specialities</h2>
-    <div id="overhead">
-        <div>
-            <p>Consult with top doctors across specialities</p>
+<% layout('layouts/boilerplate') %>
+    <!-- Jumbotron -->
+    <div class="container-fluid bg-dark text-light p-5">
+        <div class="container bg-dark p-5">
+            <h1 class="display-4">Welcome to TeleMedico</h1>
+            <hr>
+            <p>Our team's website for HackRx annual hackathon hosted by Bajaj Finserv. </p>
+            <a href="#" class="btn btn-primary">Check doctor's availability</a>
         </div>
-        <a href="#" class="btn btn-info">See All Specialities</a>
-        <!-- <button class="spec"><a href="#">See All Specialities</a></button> -->
     </div>
-    <div class="menu" id="scrollmenu">
-        <div class="img img 1">Sexology</div>
-        <div class="img img2">Gynaecology</div>
-        <div class="img3 img">Dernatology</div>
-        <div class="img4 img">Psychiatry</div>
-        <div class="img img 1">Stomach Digestion</div>
-        <div class="img img2">Pediatrics</div>
-        <div class="img img 1">Kidney and Urine</div>
-        <div class="img img2">Pediatrics</div>
-        <div class="img img 1">Kidney and Urine</div>
+
+    <!-- Specialities section -->
+    <div class="middle">
+        <h2 id="letter">25+ Specialities</h2>
+        <div id="overhead">
+            <div>
+                <p>Consult with top doctors across specialities</p>
+            </div>
+            <a href="#" class="btn btn-info">See All Specialities</a>
+            <!-- <button class="spec"><a href="#">See All Specialities</a></button> -->
+        </div>
+        <div class="menu" id="scrollmenu">
+            <div class="img img 1">Sexology</div>
+            <div class="img img2">Gynaecology</div>
+            <div class="img3 img">Dernatology</div>
+            <div class="img4 img">Psychiatry</div>
+            <div class="img img 1">Stomach Digestion</div>
+            <div class="img img2">Pediatrics</div>
+            <div class="img img 1">Kidney and Urine</div>
+            <div class="img img2">Pediatrics</div>
+            <div class="img img 1">Kidney and Urine</div>
+        </div>
+        <button id="leftscroll" class="scrollBtn"><i class="bi bi-arrow-left"></i></button>
+        <button id="rightscroll" class="scrollBtn"><i class="bi bi-arrow-right"></i></button>
     </div>
-    <button id="leftscroll" class="scrollBtn"><i class="bi bi-arrow-left"></i></button>
-    <button id="rightscroll" class="scrollBtn"><i class="bi bi-arrow-right"></i></button>
-</div>
+
+    <!-- FAQ's section -->
+    <!-- <div class="faq-section">
+   <h2>FAQ'S</h2>
+   <div class="faq-container">
+       <div class="grid-row">
+           <section class="grid-col">
+               <div class="faq-0">
+                   <h3 class="accordian-text">What is online doctor consultation?</h3>
+                   <p class="faq-text">
+                       <span>Online doctor consultation or online medical consultation is a consultation method...</span>
+                       <a href="#" class="read">Read More</a>
+                   </p>
+               </div>
+           </section>
+       </div>
+   </div>
+
+</div> -->
+
+    <!-- Benefits Section -->
+    <div class="benefits">
+        <div class="benefits-wrapper">
+            <h2 class="benefits-heading">Benefits of Online Consultation</h2>
+            <div class="card">
+                <div class="grid-row">
+                    <div class="grid-col">
+                        <div class="benefit-container-1">
+                            <h3 class="heading"> Consult Top Doctors 24 x 7</h3>
+                            <p>Consult the best Doctors available in various Specialities with multiple years of
+                                experience and service</p>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="benefit-container-1">
+                            <h3 class="heading">Similar Clinic Experience</h3>
+                            <p>Experience clinic like consultation through in-built chat feature of TeleMedico</p>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="benefit-container-1">
+                            <h3 class="heading">Convenient and Easy</h3>
+                            <p>Start an instant consultation and check Doctors availability and Appointment within 2
+                                minutes and schedule appointment</p>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="benefit-container-2">
+                            <h3 class="heading">Free Follow Up</h3>
+                            <p>Patients will get free consultation for 7 days and get access to chats</p>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="benefit-container">
+                            <h3 class="heading">100% Safe Consultation</h3>
+                            <p>Be assured that your online consultation will be fully private and secured</p>
+                        </div>
+                    </div>
+                    <div class="grid-col">
+                        <div class="benefit-container">
+                            <h3 class="heading">Chat Facility</h3>
+                            <p>Built-In chat facility for easy and secure interaction between doctor and patients and pre appointment facility</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
