@@ -1,3 +1,45 @@
+/* GENERAL STYLES */
+main{
+    padding: 5rem;
+}
+
+/* ! <NAVBAR> */
+.nav-item {
+    position: relative;
+}
+
+.hover-anim::before {
+    position: absolute;
+    content: "";
+    background-color: rgb(224, 83, 106);
+    height: 3px;
+    left: 50%;
+    width: 4.5%;
+    transform: translate(-50%, 0) scaleX(0);
+    bottom: 3px;
+    transition: 0.3s;
+}
+
+.hover-anim:hover::before {
+    width: 90%;
+    transform: translate(-50%, 0) scaleX(1);
+}
+
+#log-sign-btns {
+    position: relative;
+    right: -400%;
+}
+
+#log-sign-btns .btn {
+    border-color: #FC5185;
+    color: #FC5185;
+}
+
+#log-sign-btns .btn:hover {
+    background-color: #FC5185;
+    color: white;
+}
+/* ! </NAVBAR> */
 
 /* SPECIALIST SECTION STYLING */
 
@@ -56,7 +98,7 @@
     border-radius: 10px;
     border: 1px solid rgb(41, 40, 40);
 }
-a{
+.spec a{
     text-decoration: none;
     color: black;
     font-weight: bold;
