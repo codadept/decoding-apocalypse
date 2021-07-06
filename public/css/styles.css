@@ -187,4 +187,66 @@ footer
     background-size: cover;
     background-position: center;
     min-height: 360px;
+    padding: 30px;
+    border: 60px;
 }
+
+.footer-content
+{
+    margin: 30px;
+    padding-top:  120px;
+    border: 80px;
+    text-decoration: none;
+    color: black;
+    /* vertical-align: middle; */
+}
+.footer-col
+{  
+    display: inline-table;
+    font-size: 15px;
+    line-height: 20px;
+    width: 19.7%;
+}
+.footer-title
+{
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.footer-item
+{
+    text-decoration: none;
+    display: block;
+    font-size: 15px;
+    color: black;
+    font-weight: normal;
+}
+/* .footer-text
+{   
+    position: relative;
+    bottom: 10%;
+    padding-top: 160px;
+    margin: 30px;
+}
+.footer-text a
+{   
+    padding: 15px;
+    margin: 25px;
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+}
+.col-1
+{
+    display: block;
+    width: 5%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    flex: 0 0 auto;
+    /* width: 8.33333333%; */
+/* } */ 
