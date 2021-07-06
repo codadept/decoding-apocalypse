@@ -1,6 +1,6 @@
 /* GENERAL STYLES */
 main{
-    /* padding: 5rem; */
+    padding: 5rem;
 }
 
 /* ! <NAVBAR> */
@@ -50,7 +50,7 @@ main{
 
 #log-sign-btns {
     position: relative;
-    right: -400%;
+    right: -20vw;
 }
 
 #log-sign-btns .btn {
