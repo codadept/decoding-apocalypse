@@ -221,6 +221,11 @@ main{
     font-size: 22px;
     font-weight: bold;
 }
+.right-icon
+{
+    position: relative;
+    height: 50px;
+}
 /* FOOTER STYLING */
 
 footer
