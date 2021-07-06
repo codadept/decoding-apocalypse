@@ -19,6 +19,9 @@ app.get('/doctor', (req, res) => {
     res.render('doctor');
 });
 
+app.get('/appointment', (req, res) => {
+    res.render('appointment');
+});
 app.get('*', (req,res) => {
     res.render('error');
 });

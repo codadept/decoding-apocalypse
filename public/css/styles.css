@@ -1,6 +1,6 @@
 /* GENERAL STYLES */
 main{
-    padding: 5rem;
+    /* padding: 5rem; */
 }
 
 /* ! <NAVBAR> */
@@ -161,14 +161,29 @@ main{
 {
     padding: 0px;
     margin: 0px;
-    /* background-color: rgb(243, 232, 234); */
+    /* background-color: #04566e; */
 }
 .bg-doctor
 {
     background-color: #04566e;
     background-size: cover;
-    min-height: max-content;
+    /* bottom: 0; */
+    position: relative;
+    /* height: 280vh;    */
+    padding: 0;
+    margin: 0;
+    border: 0;
+    z-index: 0;
+    /* min-height: max-content; */
+}
 
+.doctor-title
+{
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
 }
  
 .card
@@ -176,6 +191,8 @@ main{
     position: relative;
     border: 10px;
     margin: 10px;
+    margin-bottom: 25px;
+
 }
 
 .row
@@ -185,6 +202,25 @@ main{
     border: 10px;
 }
 
+/* Benefits of Online Consultation */
+.grid-col
+{
+    flex-basis: 33.33%;
+    padding: 27px;
+    text-align: justify;
+    font-size: 17px;
+}
+.grid-row
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.heading
+{
+    font-size: 22px;
+    font-weight: bold;
+}
 /* FOOTER STYLING */
 
 footer
@@ -196,7 +232,10 @@ footer
     min-height: 360px;
     padding: 30px;
     border: 60px;
-    background-color:#04566e ;
+    /* z-index: 1; */
+    /* position: sticky; */
+
+    /* background-color:#04566e ; */
 }
 
 .footer-content
@@ -212,13 +251,14 @@ footer
 {  
     display: inline-table;
     font-size: 15px;
-    line-height: 20px;
+    line-height: 22px;
     width: 19.7%;
+    padding-right: 7px;
 }
 .footer-title
 {
     margin-bottom: 5px;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -229,5 +269,6 @@ footer
     font-size: 20px;
     color: black;
     font-weight: normal;
+    padding: 5px;
 }
 
