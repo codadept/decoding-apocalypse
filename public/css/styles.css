@@ -4,8 +4,31 @@ main{
 }
 
 /* ! <NAVBAR> */
+.navbar .container {
+    position: relative;
+    left: -10.5%;
+}
+
 .nav-item {
     position: relative;
+}
+
+.navbar-brand img{
+    height: 60px;
+    padding: 0;
+}
+
+.hover-anim {
+    font-size: 20px;
+    padding: 0 10px 0 10px;
+}
+
+#navbarDropdown {
+    font-size: 20px;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: #FC5185;
 }
 
 .hover-anim::before {
