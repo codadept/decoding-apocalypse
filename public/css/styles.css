@@ -1,6 +1,6 @@
 /* GENERAL STYLES */
 main{
-    padding: 5rem;
+    /* padding: 5rem; */
 }
 
 /* ! <NAVBAR> */
@@ -140,6 +140,13 @@ main{
     margin: 0px;
     /* background-color: rgb(243, 232, 234); */
 }
+.bg-doctor
+{
+    background-color: #04566e;
+    background-size: cover;
+    min-height: max-content;
+
+}
  
 .card
 {   font-family: Camphor,sans-serif;
@@ -199,31 +206,4 @@ footer
     color: black;
     font-weight: normal;
 }
-/* .footer-text
-{   
-    position: relative;
-    bottom: 10%;
-    padding-top: 160px;
-    margin: 30px;
-}
-.footer-text a
-{   
-    padding: 15px;
-    margin: 25px;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 18px;
-    color: black;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-}
-.col-1
-{
-    display: block;
-    width: 5%;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    flex: 0 0 auto;
-    /* width: 8.33333333%; */
-/* } */ 
+
