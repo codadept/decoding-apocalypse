@@ -6,7 +6,7 @@ main{
 /* ! <NAVBAR> */
 .navbar .container {
     position: relative;
-    left: -10.5%;
+    left: -10.4vw;
 }
 
 .nav-item {
@@ -50,10 +50,11 @@ main{
 
 #log-sign-btns {
     position: relative;
-    right: -400%;
+    right: -32vw;
 }
 
 #log-sign-btns .btn {
+    margin: 0 5px 0 5px;
     border-color: #FC5185;
     color: #FC5185;
 }
@@ -65,6 +66,11 @@ main{
 /* ! </NAVBAR> */
 
 /* SPECIALIST SECTION STYLING */
+
+.jumbo {
+    margin: 0;
+    padding: 0;
+}
 
 .middle{
     margin:30px;
