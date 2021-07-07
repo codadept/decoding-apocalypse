@@ -1,7 +1,7 @@
 /* GENERAL STYLES */
-main{
+/* main{
     padding: 5rem;
-}
+} */
 
 /* ! <NAVBAR> */
 .navbar .container {
@@ -50,7 +50,7 @@ main{
 
 #log-sign-btns {
     position: relative;
-    right: -32vw;
+    right: -20vw;
 }
 
 #log-sign-btns .btn {
@@ -64,6 +64,194 @@ main{
     color: white;
 }
 /* ! </NAVBAR> */
+
+/*? <LOGIN> */
+.log-body {
+    background: url('/img/form-template.png') no-repeat center center fixed;
+}
+
+.log-body input {
+    outline: none;
+    border: none;
+    background: transparent;
+}
+
+.login-box {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background-color: #fc5184d8;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+  }
+  
+.login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+  
+.login-box .user-box {
+    position: relative;
+}
+
+.login-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    color: #fff;
+    transition: 500ms;
+    font-size: 16px;
+    pointer-events: none;
+}
+
+.login-box .user-box .input {
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #fff;
+}
+
+.input:active ~ label {
+    top: -20px;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.input:focus ~ label {
+    top: -20px;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+.input:valid ~ label  {
+    top: -20px;
+    color: #03e9f4;
+    font-size: 12px;
+}
+
+
+.login-box form a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: all .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    color: #03e9f4;
+}
+
+.login-box a:hover {
+    background-color: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+}
+
+.login-box a span {
+    position: absolute;
+    display: block;
+}
+
+@keyframes btnAnimA {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+.login-box a span:nth-child(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: btnAnimA 1500ms linear infinite;
+    /* animation-delay: 200ms; */
+    animation-fill-mode: backwards;
+    animation-play-state: running;
+}
+
+
+@keyframes btnAnimB {
+    0% {
+        top: -100%
+    }
+    50% {
+        top: 100%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+.login-box a span:nth-child(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: btnAnimB 1500ms linear infinite;
+    animation-delay: 300ms;
+}
+
+
+@keyframes btnAnimC {
+    0% {
+        right: -100%;
+    }
+    50% {
+        right: 100%;
+    }
+    100% {
+        right: 100%;
+    }
+}
+.login-box a span:nth-child(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: btnAnimC 1500ms linear infinite;
+    animation-delay: 600ms;
+}
+
+
+@keyframes btnAnimD {
+    0% {
+        bottom: -100%;
+    }
+    50%,100% {
+        bottom: 100%;
+    }
+}
+.login-box a span:nth-child(4) {
+    left: 0;
+    bottom: -100%;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: btnAnimD 1500ms linear infinite;
+    animation-delay: 900ms;
+}
+/*? </LOGIN> */
 
 /* SPECIALIST SECTION STYLING */
 
@@ -167,7 +355,33 @@ main{
 {
     padding: 0px;
     margin: 0px;
-    /* background-color: rgb(243, 232, 234); */
+    /* background-color: #04566e; */
+}
+.bg-doctor
+{
+    background-color: #04566e;
+    background-size: cover;
+    /* bottom: 0; */
+    position: relative;
+    /* height: 280vh;    */
+    padding: 0;
+    margin: 0;
+    border: 0;
+    z-index: 0;
+    /* min-height: max-content; */
+}
+
+.bg-doctor .justify-content-center {
+    margin: 0;
+}
+
+.doctor-title
+{
+    font-weight: bold;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
 }
  
 .card
@@ -175,6 +389,8 @@ main{
     position: relative;
     border: 10px;
     margin: 10px;
+    margin-bottom: 25px;
+
 }
 
 .row
@@ -184,6 +400,25 @@ main{
     border: 10px;
 }
 
+/* Benefits of Online Consultation */
+.grid-col
+{
+    flex-basis: 33.33%;
+    padding: 27px;
+    text-align: justify;
+    font-size: 17px;
+}
+.grid-row
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.heading
+{
+    font-size: 22px;
+    font-weight: bold;
+}
 /* FOOTER STYLING */
 
 footer
@@ -195,6 +430,10 @@ footer
     min-height: 360px;
     padding: 30px;
     border: 60px;
+    /* z-index: 1; */
+    /* position: sticky; */
+
+    /* background-color:#04566e ; */
 }
 
 .footer-content
@@ -210,13 +449,14 @@ footer
 {  
     display: inline-table;
     font-size: 15px;
-    line-height: 20px;
+    line-height: 22px;
     width: 19.7%;
+    padding-right: 7px;
 }
 .footer-title
 {
     margin-bottom: 5px;
-    font-size: 17px;
+    font-size: 20px;
     font-weight: bold;
 }
 
@@ -224,35 +464,9 @@ footer
 {
     text-decoration: none;
     display: block;
-    font-size: 15px;
+    font-size: 20px;
     color: black;
     font-weight: normal;
+    padding: 5px;
 }
-/* .footer-text
-{   
-    position: relative;
-    bottom: 10%;
-    padding-top: 160px;
-    margin: 30px;
-}
-.footer-text a
-{   
-    padding: 15px;
-    margin: 25px;
-    text-decoration: none;
-    font-weight: normal;
-    font-size: 18px;
-    color: black;
-    cursor: pointer;
-    font-family: 'Montserrat', sans-serif;
-}
-.col-1
-{
-    display: block;
-    width: 5%;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    flex: 0 0 auto;
-    /* width: 8.33333333%; */
-/* } */ 
+
