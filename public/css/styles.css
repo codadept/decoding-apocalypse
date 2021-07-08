@@ -67,7 +67,7 @@
 
 /*? <LOGIN> */
 .log-body {
-    background: url('/img/form-template.png') no-repeat center center fixed;
+    background: url('/img/telemedical-final.gif') no-repeat center center fixed;
 }
 
 .log-body input {
@@ -94,7 +94,16 @@
     color: #fff;
     text-align: center;
 }
+
+.login-box p {
+    color: white;
+}
   
+.login-box p a{
+    color: #03e9f4;
+    padding: 10px 20px;
+    transition: all 0.3s;
+}
 .login-box .user-box {
     position: relative;
 }
@@ -141,12 +150,13 @@
     position: relative;
     display: inline-block;
     padding: 10px 20px;
+    padding-bottom: 0;
     font-size: 16px;
     text-decoration: none;
     text-transform: uppercase;
     overflow: hidden;
-    transition: all .5s;
-    margin-top: 40px;
+    transition: all .3s;
+    margin-top: 10px;
     letter-spacing: 4px;
     color: #03e9f4;
 }
@@ -357,6 +367,7 @@
     margin: 0px;
     /* background-color: #04566e; */
 }
+
 .bg-doctor
 {
     background-color: #04566e;
@@ -408,12 +419,14 @@
     text-align: justify;
     font-size: 17px;
 }
+
 .grid-row
 {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
 }
+
 .heading
 {
     font-size: 22px;
@@ -445,6 +458,7 @@ footer
     color: black;
     /* vertical-align: middle; */
 }
+
 .footer-col
 {  
     display: inline-table;
@@ -453,6 +467,7 @@ footer
     width: 19.7%;
     padding-right: 7px;
 }
+
 .footer-title
 {
     margin-bottom: 5px;
