@@ -1,7 +1,10 @@
 /* GENERAL STYLES */
-/* main{
-    padding: 5rem;
-} */
+ main{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+} 
 
 /* ! <NAVBAR> */
 .navbar .container {
@@ -240,25 +243,76 @@
     height: 50px;
 }
 
-/* Appointment Styling */
-@import url(https://fonts.googleapis.com/css?family=Montserrat);
+/* FOOTER STYLING */
 
-/*basic reset*/
+footer
+{
+    background-image: url(/img/footer.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 360px;
+    padding: 30px;
+    border: 60px;
+    /* z-index: 1; */
+    /* position: sticky; */
+    
+    /* background-color:#04566e ; */
+}
+
+.footer-content
+{
+    margin: 30px;
+    padding-top:  120px;
+    border: 80px;
+    text-decoration: none;
+    color: black;
+    /* vertical-align: middle; */
+}
+.footer-col
+{  
+    display: inline-table;
+    font-size: 15px;
+    line-height: 22px;
+    width: 19.7%;
+    padding-right: 7px;
+}
+.footer-title
+{
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.footer-item
+{
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    color: black;
+    font-weight: normal;
+    padding: 5px;
+}
+
+
+/* Appointment Styling */
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
 * {margin: 0; padding: 0;}
 
-html {
+.appointment {
 	height: 100%;
-	/*Image only BG fallback*/
-	
-	/*background = gradient + image pattern combo*/
 	background: 
 		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
+        padding: 0;
+        margin: 0;
+       
 }
 
 body {
 	font-family: montserrat, arial, verdana;
 }
-/*form styles*/
+
 #msform {
 	width: 400px;
 	margin: 50px auto;
@@ -274,15 +328,13 @@ body {
 	box-sizing: border-box;
 	width: 80%;
 	margin: 0 10%;
-	
-	/*stacking fieldsets above each other*/
 	position: relative;
 }
-/*Hide all except first fieldset*/
+
 #msform fieldset:not(:first-of-type) {
 	display: none;
 }
-/*inputs*/
+
 #msform input, #msform textarea {
 	padding: 15px;
 	border: 1px solid #ccc;
@@ -294,7 +346,7 @@ body {
 	color: #2C3E50;
 	font-size: 13px;
 }
-/*buttons*/
+
 #msform .action-button {
 	width: 100px;
 	background: #27AE60;
@@ -309,7 +361,7 @@ body {
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
 }
-/*headings*/
+
 .fs-title {
 	font-size: 15px;
 	text-transform: uppercase;
@@ -322,11 +374,17 @@ body {
 	color: #666;
 	margin-bottom: 20px;
 }
-/*progressbar*/
+select
+{
+    font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;  
+    font-family: montserrat, arial, verdana;
+}
 #progressbar {
 	margin-bottom: 30px;
 	overflow: hidden;
-	/*CSS counters to number the steps*/
 	counter-reset: step;
 }
 #progressbar li {
@@ -350,7 +408,6 @@ body {
 	border-radius: 3px;
 	margin: 0 auto 5px auto;
 }
-/*progressbar connectors*/
 #progressbar li:after {
 	content: '';
 	width: 100%;
@@ -359,22 +416,16 @@ body {
 	position: absolute;
 	left: -50%;
 	top: 9px;
-	z-index: -1; /*put it behind the numbers*/
+	z-index: -1; 
 }
 #progressbar li:first-child:after {
-	/*connector not needed before the first step*/
 	content: none; 
 }
-/*marking active/completed steps green*/
-/*The number of the step and the connector before it = green*/
+
 #progressbar li.active:before,  #progressbar li.active:after{
 	background: #27AE60;
 	color: white;
 }
-
-
-
-
 
 /* FOOTER STYLING */
 
@@ -414,18 +465,7 @@ footer
 
 .footer-title
 {
-    margin-bottom: 5px;
-    font-size: 20px;
-    font-weight: bold;
+    position: absolute;
+    left: 0;
+    text-align: left;
 }
-
-.footer-item
-{
-    text-decoration: none;
-    display: block;
-    font-size: 20px;
-    color: black;
-    font-weight: normal;
-    padding: 5px;
-}
-
