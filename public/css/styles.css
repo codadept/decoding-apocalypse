@@ -469,3 +469,21 @@ footer
     left: 0;
     text-align: left;
 }
+
+/* Specialities Carousel */
+
+.carousel-item{
+    height: 70vh;
+}
+
+.speciality-first-slide{
+    background-color: #FC5185;
+}
+
+.speciality-second-slide{
+    background-color: #3FC1C9;
+}
+
+.speciality-third-slide{
+    background-color:  #364F6B;
+}
