@@ -541,3 +541,32 @@ footer
     left: -3%; 
     top: 20%;   
 }
+/* *<About us> */
+#about-us {
+    text-align: center;
+}
+
+.connect img {
+    margin-left: 70px;
+    margin-right: 70px;
+}
+
+.connect  #cntr{
+    position: relative;
+    text-align: center;
+    left: 75px;
+}
+
+.connect #lft {
+    position: relative;
+    left: -200px;
+    
+}
+
+.connect #rgt {
+    position: relative;
+    left: 174px;
+}
+
+/* *</About us> */
+/*  */
