@@ -4,6 +4,7 @@
   "description": "HackRx - Annual Hackathon hosted by Bajaj Finserv",
   "main": "index.js",
   "scripts": {
+    "devstart": "nodemon index",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,8 +22,11 @@
   },
   "homepage": "https://github.com/codadept/decoding-apocalypse#readme",
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "ejs": "^3.1.6",
     "ejs-mate": "^3.0.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "hbs": "^4.1.2",
+    "mongoose": "^5.13.2"
   }
 }
