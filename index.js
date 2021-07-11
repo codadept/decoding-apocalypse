@@ -27,6 +27,10 @@ app.get('/appointment', (req, res) => {
     res.render('appointment');
 });
 
+app.get('/specialities', (req, res) => {
+    res.render('specialities');
+});
+
 app.get('/login', (req, res)=> {
     res.render('login');
 });
