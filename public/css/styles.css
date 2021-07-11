@@ -491,9 +491,7 @@ footer
 /* Specialities Scrool Menu Icons */
 
 .specialities-images{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    
     height:130px;
     width: 130px;
 }
