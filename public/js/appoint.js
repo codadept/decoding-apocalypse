@@ -6,7 +6,8 @@ var animating; //flag to prevent quick multi-click glitches
 $(".next").click(function(){
 	if(animating) return false;
 	animating = true;
-	
+	var block1 = document.getElementById('block1');
+    block1.style.display= 'none';
 	current_fs = $(this).parent();
 	next_fs = $(this).parent().next();
 	
