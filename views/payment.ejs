@@ -1,0 +1,20 @@
+<!-- <!DOCTYPE html> 
+<html> 
+<title>Stripe Payment Demo</title>  -->
+<% layout('layouts/boilerplate') %> 
+<div> 
+    <h3>Welcome to TeleMedico Payment Gateway</h3> 
+    <form action="payment" method="POST"> 
+    <script
+        src="//checkout.stripe.com/v2/checkout.js"
+        class="stripe-button"
+        data-key="<%= key %>" 
+        data-amount="39900" 
+        data-currency="inr" 
+        data-name="TeleMedico" 
+        data-description="Consultation charges" 
+        data-locale="auto" > 
+        </script> 
+    </form> 
+</div> 
+<!-- </html> -->
