@@ -1,10 +1,10 @@
 /* GENERAL STYLES */
- /* main{
+ main{
     padding: 0;
     margin: 0;
     border: 0;
     box-sizing: border-box;
-}  */
+} 
 
 /* ! <NAVBAR> */
 .navbar .container {
@@ -300,15 +300,19 @@ footer
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 * {margin: 0; padding: 0;}
 
-.appointment {
-	height: 100%;
+.appointment 
+{
+    min-height: 120vh;
 	background-image: url(/img/appointment.gif);
- /* background:  */
-	 /* linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6)); */
-        background-size: cover;
-        background-repeat: no-repeat;
-        
-       
+    background-size: cover;
+    background-repeat: no-repeat;      
+}
+  
+.appointment-bg
+{
+    position: relative;
+    left: 20%;
+    top: 8%;
 }
 
 body {
@@ -347,11 +351,12 @@ body {
 	font-family: montserrat;
 	color: #2C3E50;
 	font-size: 13px;
+    font-family: montserrat, arial, verdana;
 }
 
 #msform .action-button {
 	width: 100px;
-	background: #27AE60;
+	background: #FC5185;
 	font-weight: bold;
 	color: white;
 	border: 0 none;
@@ -361,7 +366,7 @@ body {
 	margin: 10px 5px;
 }
 #msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #FC5185;
 }
 
 .fs-title {
@@ -375,8 +380,9 @@ body {
 	font-size: 13px;
 	color: #666;
 	margin-bottom: 20px;
+    font-family: montserrat, arial, verdana;
 }
-select
+select 
 {
     font-weight: normal;
 	font-size: 13px;
@@ -391,7 +397,7 @@ select
 }
 #progressbar li {
 	list-style-type: none;
-	color: white;
+	color: rgb(12, 12, 12);
 	text-transform: uppercase;
 	font-size: 9px;
 	width: 33.33%;
@@ -425,7 +431,7 @@ select
 }
 
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
+	background: #FC5185;
 	color: white;
 }
 
@@ -490,7 +496,7 @@ footer
 
 /*  */
 
-/* Specialities Scrool Menu Icons */
+/* Specialities Scroll Menu Icons */
 
 .specialities-images{
     
@@ -504,6 +510,37 @@ footer
     background-color: #fc6491!important;
 }
 
+/* profile styling  */
+.profile-container
+{
+    /* position: relative;
+    left: 40%; */
+    background-color: #04566e;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card
+{
+    position: relative;
+    left: 40%;
+}
+.profile-btn
+{
+    position: relative;
+    left: 15%;
+    top: 10%;
+}
+.btn-circle
+{
+     height: 25px;
+    width: 25px;
+    background-color: rgb(34, 219, 49);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: -3%; 
+    top: 20%;   
+}
 /* *<About us> */
 #about-us {
     text-align: center;
