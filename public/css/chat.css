@@ -1,0 +1,62 @@
+.chat {
+    min-height: 100vh;
+}
+
+.chat-body{
+    width: 75%;
+    height: 90%;
+    padding: 2rem;
+    margin: 2rem auto;
+    border: 2px solid red;
+}
+
+.chat-messages-body{
+    height: 85%;
+    border: 2px solid black;
+    margin-bottom: 0.5rem;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+.chat-input{
+    height: 15%;
+    display: flex;
+}
+
+.chat-input input{
+    height: 100%;
+    width: 90%;
+    padding: 2rem;
+    font-size: 1.2rem;
+}
+
+.chat-send{
+    width: 10%;
+    font-size: 5rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.message{
+    border: 1px solid black;
+    padding: 1rem;
+    margin: 0.6rem;
+}
+
+.message-right{
+    float: right;
+    clear: both;
+}
+
+.message-left{
+    float: left;
+    clear: both;
+}
+
+.message-info{
+    border: 1px solid rgb(0, 0, 0);
+    width: max-content;
+    margin: 1rem auto;
+    padding: 1rem 1rem 0;
+    background-color: rgb(255, 255, 115);
+}
