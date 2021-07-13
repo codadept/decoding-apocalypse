@@ -574,7 +574,32 @@ footer
     background-size: cover;
     padding: 10px;
 }
+.profile-img
 
+{   
+    position: relative;
+    display: inline-block;
+    width: 340px;
+    height: 340px;
+    padding: 30px;
+    margin: 30px;
+}
+ #tp
+ {
+     text-align: center;
+     color: white;
+     padding: 10px;
+     margin: 10px;
+ }
+.profile-title
+{
+    text-align: center;
+     color: white;
+     position: absolute;
+     top: 34%;
+     left: 40%;
+     padding: 30px;
+} 
 .profile-content
 {
     color: white;
