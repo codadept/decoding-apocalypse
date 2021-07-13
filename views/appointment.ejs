@@ -9,11 +9,17 @@
       <li>Personal Details</li>
     </ul>
     <!-- fieldsets -->
-    <fieldset>
+    <fieldset id="block1">
       <h2 class="fs-title">Patient Details</h2>
       <h3 class="fs-subtitle">This is step 1 of your TeleMedico journey</h3>
       <input type="text" name="name" placeholder="Full Name" />
       <input type="text" name="age" placeholder="Age" />
+      <select class="form-select" id="inlineFormSelectPref">
+        <option selected>Gender</option>
+        <option value="1">Male</option>
+        <option value="2">Female</option>
+        <option value="3">Others</option>
+      </select>
       <input type="text" name="phone" placeholder="Phone" />
       <textarea name="address" placeholder="Address"></textarea>
       
@@ -26,14 +32,15 @@
       <h2 class="fs-title">Personal Details</h2>
       <h3 class="fs-subtitle">100% safe consultation</h3>
       
-      <select class="form-select fs-subtitle" id="inlineFormSelectPref">
+      <select class="form-select " id="inlineFormSelectPref">
         <option selected>Speciality Required</option>
-        <option value="1">Dermatology</option>
-        <option value="2">Gynaecology</option>
-        <option value="3">Kidney and Urine</option>
-        <option value="3">Pediatrics</option>
-        <option value="3">Stomach Digestion</option>
-        <option value="3">Psychiatry</option>
+        <option value="1">Otology</option>
+        <option value="2">Gynecology </option>
+        <option value="3">Neurology</option>
+        <option value="3">Dermatology</option>
+        <option value="3">Pediatrician</option>
+        <option value="3">Gastroenterology</option>
+        <option value="3">Nephrology</option>
         <option value="3">Sexology</option>
       </select>
       
@@ -44,5 +51,5 @@
         <input type="date" id="consultation" name="consultation" placeholder="Last Consultation Date">
         <!-- <input type="submit"> -->
       </form>
-      <input type="submit" name="submit" class="submit action-button" value="Submit" />
+      <a class=" action-button" href="/doctors/someidwhichcomesfromdb/appointment/payment">Proceed for Payment</a>
    </div>

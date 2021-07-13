@@ -1,13 +1,13 @@
-<% layout('layouts/boilerplate') %> 
-<!-- Jumbotron -->
-<div class="container-fluid bg-dark text-light p-5 jumbo">
-    <div class="container bg-dark p-5">
-        <h1 class="display-4">Welcome to TeleMedico</h1>
-        <hr>
-        <p>Our team's website for HackRx annual hackathon hosted by Bajaj Finserv. </p>
-        <a href="#" class="btn btn-primary">Check doctor's availability</a>
+<% layout('layouts/boilerplate') %>
+    <!-- Jumbotron -->
+    <div class="container-fluid bg-dark text-light p-5 jumbo">
+        <div class="container bg-dark p-5">
+            <h1 class="display-4">Welcome to TeleMedico</h1>
+            <hr>
+            <p>Our team's website for HackRx annual hackathon hosted by Bajaj Finserv. </p>
+            <a href="#" class="btn btn-primary">Check doctor's availability</a>
+        </div>
     </div>
-</div>
     <!-- Specialities section -->
     <div class="middle">
         <h2 id="letter">25+ Specialities</h2>
@@ -15,51 +15,67 @@
             <div>
                 <p>Consult with top doctors across specialities</p>
             </div>
-            <a href="#" class="btn btn-info">See All Specialities</a>
+            <a href="./specialities" class="btn btn-info">See All Specialities</a>
             <!-- <button class="spec"><a href="#">See All Specialities</a></button> -->
         </div>
         <div class="menu" id="scrollmenu">
 
-            <div class="img img 1">
-                <img class="specialities-images" src="/img/specialities/1.png" alt="">
-                <a href="#" class="btn btn-info consult">Consult Now</a>
-            </div>
+            <a href="#">
+                <div class="img img 1">
+                    <img class="specialities-images" src="/img/specialities/1.png" alt="">
+                    <a href="#" class="btn btn-info consult">Otology</a>
+                </div>
+            </a>
 
-            <div class="img img2">
-                <img class="specialities-images" src="/img/specialities/2.png" alt="">
-                <a href="#" class="btn btn-info consult">Consult Now</a>
-            </div>
+            <a href="#">
+                <div class="img img2">
+                    <img class="specialities-images" src="/img/specialities/2.png" alt="">
+                    <a href="#" class="btn btn-info consult">Gynecology</a>
+                </div>
+            </a>
 
-            <div class="img3 img">
-                <img class="specialities-images" src="/img/specialities/3.png" alt="">
-                <a href="#" class="btn btn-info consult">Consult Now</a>
-            </div>
+            <a href="#">
+                <div class="img3 img">
+                    <img class="specialities-images" src="/img/specialities/3.png" alt="">
+                    <a href="#" class="btn btn-info consult">Neurology</a>
+                </div>
+            </a>
 
-            <div class="img4 img">
-                <img class="specialities-images" src="/img/specialities/4.png" alt="">
-                <a href="#" class="btn btn-info consult">Consult Now</a>
-            </div>
+            <a href="#">
+                <div class="img4 img">
+                    <img class="specialities-images" src="/img/specialities/4.png" alt="">
+                    <a href="#" class="btn btn-info consult">Dermatology</a>
+                </div>
+            </a>
 
-            <div class="img img 1">
-                <img class="specialities-images" src="/img/specialities/5.png" alt="">
-                <a href="#" class="btn btn-info consult">Consult Now</a>
-            </div>
+            <a href="#">
+                <div class="img img 1">
+                    <img class="specialities-images" src="/img/specialities/5.png" alt="">
+                    <a href="#" class="btn btn-info consult">Pedtrician</a>
+                </div>
+            </a>
 
-            <div class="img img2">
-                <img class="specialities-images" src="/img/specialities/6.png" alt="">
-                <a href="#" class="btn btn-info consult">Consult Now</a>
-            </div>
+            <a href="#">
+                <div class="img img2">
+                    <img class="specialities-images" src="/img/specialities/6.png" alt="">
+                    <a href="#" class="btn btn-info consult">Gastroenterology</a>
+                </div>
+            </a>
 
-            <div class="img img 1">
-                <img class="specialities-images" src="/img/specialities/7.png" alt="">
-                <a href="#" class="btn btn-info consult">Consult Now</a>
-            </div>
+            <a href="#">
+                <div class="img img 1">
+                    <img class="specialities-images" src="/img/specialities/7.png" alt="">
+                    <a href="#" class="btn btn-info consult">Nephrology</a>
+                </div>
+            </a>
 
-            <div class="img img2">
-                <img class="specialities-images" src="/img/specialities/8.png" alt="">
-                <a href="#" class="btn btn-info consult">Consult Now</a>
-            </div>
-        
+            <a href="#">
+                <div class="img img2">
+                    <img class="specialities-images" src="/img/specialities/8.png" alt="">
+                    <a href="#" class="btn btn-info consult">Sexology</a>
+                </div>
+            </a>
+
         </div>
         <button id="leftscroll" class="scrollBtn"><i class="bi bi-arrow-left"></i></button>
         <button id="rightscroll" class="scrollBtn"><i class="bi bi-arrow-right"></i></button>
@@ -92,40 +108,46 @@
                 <div class="grid-row">
                     <div class="grid-col">
                         <div class="benefit-container-1">
-                            <h3 class="heading">  <img src="/img/right2.png" alt="" class="right-icon">Consult Top Doctors 24 x 7</h3>
+                            <h3 class="heading"> <img src="/img/right2.png" alt="" class="right-icon">Consult Top
+                                Doctors 24 x 7</h3>
                             <p>Consult the best Doctors available in various Specialities with multiple years of
                                 experience and service</p>
                         </div>
                     </div>
                     <div class="grid-col">
                         <div class="benefit-container-1">
-                            <h3 class="heading"> <img src="/img/right2.png" alt="" class="right-icon">Similar Clinic Experience</h3>
+                            <h3 class="heading"> <img src="/img/right2.png" alt="" class="right-icon">Similar Clinic
+                                Experience</h3>
                             <p>Experience clinic like consultation through in-built chat feature of TeleMedico</p>
                         </div>
                     </div>
                     <div class="grid-col">
                         <div class="benefit-container-1">
-                            <h3 class="heading"> <img src="/img/right2.png" alt="" class="right-icon">Convenient and Easy</h3>
+                            <h3 class="heading"> <img src="/img/right2.png" alt="" class="right-icon">Convenient and
+                                Easy</h3>
                             <p>Start an instant consultation and check Doctors availability and Appointment within 2
                                 minutes and schedule appointment</p>
                         </div>
                     </div>
                     <div class="grid-col">
                         <div class="benefit-container-2">
-                            <h3 class="heading"> <img src="/img/right2.png" alt="" class="right-icon">Free Follow Up</h3>
+                            <h3 class="heading"> <img src="/img/right2.png" alt="" class="right-icon">Free Follow Up
+                            </h3>
                             <p>Patients will get free consultation for 7 days and get access to chats</p>
                         </div>
                     </div>
                     <div class="grid-col">
                         <div class="benefit-container">
-                            <h3 class="heading"> <img src="/img/right2.png" alt="" class="right-icon"> 100% Safe Consultation</h3>
+                            <h3 class="heading"> <img src="/img/right2.png" alt="" class="right-icon"> 100% Safe
+                                Consultation</h3>
                             <p>Be assured that your online consultation will be fully private and secured</p>
                         </div>
                     </div>
                     <div class="grid-col">
                         <div class="benefit-container">
                             <h3 class="heading"> <img src="/img/right2.png" alt="" class="right-icon">Chat Facility</h3>
-                            <p>Built-In chat facility for easy and secure interaction between doctor and patients and pre appointment facility</p>
+                            <p>Built-In chat facility for easy and secure interaction between doctor and patients and
+                                pre appointment facility</p>
                         </div>
                     </div>
                 </div>
