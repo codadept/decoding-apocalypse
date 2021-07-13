@@ -503,3 +503,42 @@ footer
 }
 
 /*  */
+
+      
+.speciality-cards{
+    padding: 80px;
+    height: max-content;
+}
+
+.boxes{
+    width: 300px;
+    padding: 60px;
+    margin: 30px;
+    height: 300px;
+    display: inline-block;
+    background-image: linear-gradient(#38bebe,#2a9ce7);
+    /* background-color: #ffffff;     */
+    border: none;
+    box-shadow: 0px 3px 6px 0px;
+    border-radius: 10px;
+}
+
+.clearfix::after{
+    display: table;
+    content: "";
+    clear: both;
+}
+
+.card-box{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-box > .consult{
+    margin-top: 30px;
+    background-color: rgb(231, 43, 191);
+    color: rgb(20, 173, 220);
+}
+
+/*      */
