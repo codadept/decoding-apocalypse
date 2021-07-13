@@ -374,6 +374,8 @@ body {
 	cursor: pointer;
 	padding: 10px 5px;
 	margin: 10px 5px;
+    text-decoration: none;
+    padding-top: 7px;
 }
 
 #msform .action-button:hover, #msform .action-button:focus {
