@@ -665,7 +665,7 @@ footer
     position: absolute;
     /* text-align: center; */
     color: white;
-    top: 34%;
+    top: 32%;
     left: 40%;
     padding: 30px;
 } 
@@ -674,17 +674,18 @@ footer
 {
     color: white;
     position: absolute;
-    top: 44%;
+    top: 42%;
     left: 40%;
     line-height: 7px;
     margin: 12px;
+    padding-top: 7px;
 }
 
 .profile-special
 {
     color: white;
     position: absolute;
-    top: 60%;
+    top: 58%;
     left: 42%;
 }
 
@@ -716,6 +717,56 @@ footer
     position: relative;
     left: 9%; 
     top: -15%;   
+}
+.profile-ratings
+{  
+    width: 40px;
+    height: 60px;
+}
+ .blink
+  {
+        animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+      }
+      
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+.payment-bg
+{
+    background-image: url("/img/payment.gif");
+    background-size: cover;
+    height: 120vh;
+    width: 98.7vw;
+    background-repeat: no-repeat;
+   
+}
+.payement-title
+{
+    text-align: center;
+    color: rgb(2, 2, 2);
+     font-weight: bold;
+     position: absolute;
+     top: 50%;
+     left: 47%;
+     padding: 15px;
+     font-size: 30px;
+}
+.profile-btn
+{
+    text-decoration: none;
+    color: pink;
+    position: absolute;
+    top: 65%; 
+    left: 62%; 
+    width: 134px;
 }
 
 .blink
