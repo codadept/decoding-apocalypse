@@ -519,11 +519,7 @@ footer
     background-repeat: no-repeat;
     background-size: cover;
 }
-.card
-{
-    position: relative;
-    left: 40%;
-}
+
 .profile-btn
 {
     position: relative;
@@ -532,7 +528,7 @@ footer
 }
 .btn-circle
 {
-     height: 25px;
+    height: 25px;
     width: 25px;
     background-color: rgb(34, 219, 49);
     border-radius: 50%;
@@ -569,4 +565,100 @@ footer
 }
 
 /* *</About us> */
-/*  */
+
+/* Profile  */
+.profile-container
+{
+    display: inline-block;
+    background-color: #04566e;
+    background-size: cover;
+    padding: 10px;
+}
+img
+{   
+    position: relative;
+    display: inline-block;
+    width: 340px;
+    height: 340px;
+    padding: 30px;
+    margin: 30px;
+}
+ h1
+ {
+     text-align: center;
+     color: white;
+     padding: 20px;
+     margin: 20px;
+ }
+h3
+{
+    text-align: center;
+     color: white;
+     position: absolute;
+     top: 47%;
+     left: 40%;
+     padding: 30px;
+}
+.profile-content
+{
+    text-align: left;
+    color: white;
+    font-size: 14px;
+    position: absolute;
+    top: 59%;
+    left: 40%;
+    line-height: 7px;
+}
+.profile-special
+{
+    position: absolute;
+    top: 69%;
+    left: 42%;
+    padding: 10px;
+    color: white;
+}
+
+.profile-exp
+{
+    position: absolute;
+    top: 85%;
+    left: 42%;
+    color: white;
+}
+.profile-doc-about
+{
+    padding: 10px;
+    color: white;
+    font-size: medium;
+    position: relative;
+    margin: 60px;
+    bottom: 10%;
+    left: 2%;
+}
+.btn-circle
+{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(34, 219, 49);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: 9%; 
+    top: -13%;   
+}
+ .blink
+  {
+        animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+      }
+      
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
