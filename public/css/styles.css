@@ -574,7 +574,7 @@ footer
     background-size: cover;
     padding: 10px;
 }
-img
+.profile-img
 {   
     position: relative;
     display: inline-block;
@@ -583,57 +583,54 @@ img
     padding: 30px;
     margin: 30px;
 }
- h1
+ #tp
  {
      text-align: center;
      color: white;
-     padding: 20px;
-     margin: 20px;
+     padding: 10px;
+     margin: 10px;
  }
-h3
+.profile-title
 {
     text-align: center;
      color: white;
      position: absolute;
-     top: 47%;
+     top: 34%;
      left: 40%;
      padding: 30px;
 }
-.profile-content
+.profile-content 
 {
-    text-align: left;
     color: white;
-    font-size: 14px;
     position: absolute;
-    top: 59%;
+    top: 44%;
     left: 40%;
     line-height: 7px;
+    margin: 12px;
 }
 .profile-special
 {
-    position: absolute;
-    top: 69%;
-    left: 42%;
-    padding: 10px;
     color: white;
+    position: absolute;
+    top: 60%;
+    left: 42%;
 }
-
 .profile-exp
 {
-    position: absolute;
-    top: 85%;
-    left: 42%;
     color: white;
+    position: absolute;
+    top: 74%;
+    left: 42%;
 }
+
 .profile-doc-about
 {
-    padding: 10px;
+    
     color: white;
     font-size: medium;
-    position: relative;
-    margin: 60px;
-    bottom: 10%;
-    left: 2%;
+    padding: 20px;
+    margin: 50px;
+    
 }
 .btn-circle
 {
@@ -644,7 +641,7 @@ h3
     display: inline-block;
     position: relative;
     left: 9%; 
-    top: -13%;   
+    top: -15%;   
 }
  .blink
   {
