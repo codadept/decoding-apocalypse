@@ -574,7 +574,7 @@ footer
     background-size: cover;
     padding: 10px;
 }
-img
+/* img
 {   
     position: relative;
     display: inline-block;
@@ -598,7 +598,7 @@ h3
      top: 47%;
      left: 40%;
      padding: 30px;
-}
+} */
 .profile-content
 {
     text-align: left;
