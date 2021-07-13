@@ -1,5 +1,6 @@
 # decoding-apocalypse
 HackRx - Annual Hackathon hosted by Bajaj Finserv
+(Visit the website)[https://decoding-apocalypse.herokuapp.com/]
 
 
 ### clone the repo
