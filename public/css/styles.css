@@ -80,9 +80,11 @@
     box-sizing: border-box;
     position: relative;
 }
+
 .table{
     float: left;
 }
+
 .menu{
     margin:8px;
     min-height: 250px;
@@ -90,9 +92,11 @@
     display: flex;
     overflow-x: auto;
 }
+
 .menu::-webkit-scrollbar{
     display: none;
 }
+
 .menu .img{
     position: relative;
     top:10px;
@@ -110,18 +114,22 @@
     line-height:110px;
     margin: 20px;
 }
+
 .img:hover{
     transition: 300ms ease-in;
     transform: scale(1.02);
 }
+
 #overhead{
     margin:18px 10px;
     display: flex;
     justify-content: space-between;
 }
+
 #letter{
     margin:10px;
 }
+
 .spec{
     border:none;
     background-color: rgb(255, 255, 253);
@@ -130,6 +138,7 @@
     border-radius: 10px;
     border: 1px solid rgb(41, 40, 40);
 }
+
 .spec a{
     text-decoration: none;
     color: black;
@@ -325,6 +334,7 @@ body {
 	text-align: center;
 	position: relative;
 }
+
 #msform fieldset {
 	background: white;
 	border: 0 none;
@@ -365,6 +375,7 @@ body {
 	padding: 10px 5px;
 	margin: 10px 5px;
 }
+
 #msform .action-button:hover, #msform .action-button:focus {
 	box-shadow: 0 0 0 2px white, 0 0 0 3px #FC5185;
 }
@@ -375,6 +386,7 @@ body {
 	color: #2C3E50;
 	margin-bottom: 10px;
 }
+
 .fs-subtitle {
 	font-weight: normal;
 	font-size: 13px;
@@ -382,6 +394,7 @@ body {
 	margin-bottom: 20px;
     font-family: montserrat, arial, verdana;
 }
+
 select 
 {
     font-weight: normal;
@@ -390,11 +403,13 @@ select
 	margin-bottom: 20px;  
     font-family: montserrat, arial, verdana;
 }
+
 #progressbar {
 	margin-bottom: 30px;
 	overflow: hidden;
 	counter-reset: step;
 }
+
 #progressbar li {
 	list-style-type: none;
 	color: rgb(12, 12, 12);
@@ -404,6 +419,7 @@ select
 	float: left;
 	position: relative;
 }
+
 #progressbar li:before {
 	content: counter(step);
 	counter-increment: step;
@@ -416,6 +432,7 @@ select
 	border-radius: 3px;
 	margin: 0 auto 5px auto;
 }
+
 #progressbar li:after {
 	content: '';
 	width: 100%;
@@ -426,6 +443,7 @@ select
 	top: 9px;
 	z-index: -1; 
 }
+
 #progressbar li:first-child:after {
 	content: none; 
 }
@@ -540,28 +558,59 @@ footer
 /* *<About us> */
 #about-us {
     text-align: center;
+    min-height: 50vh;
+}
+.connect {
+    position: relative;
 }
 
 .connect img {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 .connect  #cntr{
     position: relative;
     text-align: center;
-    left: 75px;
+    left: 6.8vw;
+    font-size: 30px;
+}
+
+.connect #cont-cntr {
+    position: absolute;
+    top: 35px;
+    width: 20vw;
+    left: 15vw;
+    font-size: 14px;
 }
 
 .connect #lft {
     position: relative;
-    left: -200px;
+    left: -21.5vw;
+    font-size: 30px;
     
+}
+
+.connect #cont-lft {
+    position: absolute;
+    top: 35px;
+    width: 20vw;
+    left: 38.8vw;
+    font-size: 14px;
 }
 
 .connect #rgt {
     position: relative;
-    left: 174px;
+    left: 20vw;
+    font-size: 30px;
+}
+
+.connect #cont-rgt {
+    position: absolute;
+    top: 35px;
+    width: 20vw;
+    left: 64vw;
+    font-size: 14px;
 }
 
 /* *</About us> */
@@ -574,6 +623,7 @@ footer
     background-size: cover;
     padding: 10px;
 }
+
 .profile-img
 
 {   
@@ -584,22 +634,25 @@ footer
     padding: 30px;
     margin: 30px;
 }
- #tp
- {
-     text-align: center;
-     color: white;
-     padding: 10px;
-     margin: 10px;
- }
+
+#tp
+{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
 .profile-title
 {
     text-align: center;
-     color: white;
-     position: absolute;
-     top: 34%;
-     left: 40%;
-     padding: 30px;
+    color: white;
+    position: absolute;
+    top: 34%;
+    left: 40%;
+    padding: 30px;
 } 
+
 .profile-content
 {
     color: white;
@@ -609,6 +662,7 @@ footer
     line-height: 7px;
     margin: 12px;
 }
+
 .profile-special
 {
     color: white;
@@ -616,6 +670,7 @@ footer
     top: 60%;
     left: 42%;
 }
+
 .profile-exp
 {
     color: white;
@@ -633,6 +688,7 @@ footer
     margin: 50px;
     
 }
+
 .btn-circle
 {
     height: 25px;
@@ -644,19 +700,20 @@ footer
     left: 9%; 
     top: -15%;   
 }
- .blink
-  {
-        animation: blink-animation 1s steps(5, start) infinite;
-        -webkit-animation: blink-animation 1s steps(5, start) infinite;
-      }
+
+.blink
+{
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
       
-      @keyframes blink-animation {
-        to {
-          visibility: hidden;
-        }
-      }
-      @-webkit-keyframes blink-animation {
-        to {
-          visibility: hidden;
-        }
-      }
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
