@@ -80,9 +80,11 @@
     box-sizing: border-box;
     position: relative;
 }
+
 .table{
     float: left;
 }
+
 .menu{
     margin:8px;
     min-height: 250px;
@@ -90,9 +92,11 @@
     display: flex;
     overflow-x: auto;
 }
+
 .menu::-webkit-scrollbar{
     display: none;
 }
+
 .menu .img{
     position: relative;
     top:10px;
@@ -110,18 +114,22 @@
     line-height:110px;
     margin: 20px;
 }
+
 .img:hover{
     transition: 300ms ease-in;
     transform: scale(1.02);
 }
+
 #overhead{
     margin:18px 10px;
     display: flex;
     justify-content: space-between;
 }
+
 #letter{
     margin:10px;
 }
+
 .spec{
     border:none;
     background-color: rgb(255, 255, 253);
@@ -130,6 +138,7 @@
     border-radius: 10px;
     border: 1px solid rgb(41, 40, 40);
 }
+
 .spec a{
     text-decoration: none;
     color: black;
@@ -300,13 +309,19 @@ footer
 @import url(https://fonts.googleapis.com/css?family=Montserrat);
 * {margin: 0; padding: 0;}
 
-.appointment {
-	height: 100%;
-	background: 
-		linear-gradient(rgba(196, 102, 0, 0.6), rgba(155, 89, 182, 0.6));
-        padding: 0;
-        margin: 0;
-       
+.appointment 
+{
+    min-height: 120vh;
+	background-image: url(/img/appointment.gif);
+    background-size: cover;
+    background-repeat: no-repeat;      
+}
+  
+.appointment-bg
+{
+    position: relative;
+    left: 20%;
+    top: 8%;
 }
 
 body {
@@ -319,6 +334,7 @@ body {
 	text-align: center;
 	position: relative;
 }
+
 #msform fieldset {
 	background: white;
 	border: 0 none;
@@ -345,11 +361,12 @@ body {
 	font-family: montserrat;
 	color: #2C3E50;
 	font-size: 13px;
+    font-family: montserrat, arial, verdana;
 }
 
 #msform .action-button {
 	width: 100px;
-	background: #27AE60;
+	background: #FC5185;
 	font-weight: bold;
 	color: white;
 	border: 0 none;
@@ -358,8 +375,9 @@ body {
 	padding: 10px 5px;
 	margin: 10px 5px;
 }
+
 #msform .action-button:hover, #msform .action-button:focus {
-	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #FC5185;
 }
 
 .fs-title {
@@ -368,13 +386,16 @@ body {
 	color: #2C3E50;
 	margin-bottom: 10px;
 }
+
 .fs-subtitle {
 	font-weight: normal;
 	font-size: 13px;
 	color: #666;
 	margin-bottom: 20px;
+    font-family: montserrat, arial, verdana;
 }
-select
+
+select 
 {
     font-weight: normal;
 	font-size: 13px;
@@ -382,20 +403,23 @@ select
 	margin-bottom: 20px;  
     font-family: montserrat, arial, verdana;
 }
+
 #progressbar {
 	margin-bottom: 30px;
 	overflow: hidden;
 	counter-reset: step;
 }
+
 #progressbar li {
 	list-style-type: none;
-	color: white;
+	color: rgb(12, 12, 12);
 	text-transform: uppercase;
 	font-size: 9px;
 	width: 33.33%;
 	float: left;
 	position: relative;
 }
+
 #progressbar li:before {
 	content: counter(step);
 	counter-increment: step;
@@ -408,6 +432,7 @@ select
 	border-radius: 3px;
 	margin: 0 auto 5px auto;
 }
+
 #progressbar li:after {
 	content: '';
 	width: 100%;
@@ -418,12 +443,13 @@ select
 	top: 9px;
 	z-index: -1; 
 }
+
 #progressbar li:first-child:after {
 	content: none; 
 }
 
 #progressbar li.active:before,  #progressbar li.active:after{
-	background: #27AE60;
+	background: #FC5185;
 	color: white;
 }
 
@@ -488,7 +514,7 @@ footer
 
 /*  */
 
-/* Specialities Scrool Menu Icons */
+/* Specialities Scroll Menu Icons */
 
 .specialities-images{
     
