@@ -613,6 +613,23 @@ footer
     font-size: 14px;
 }
 
+#all-about {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+#all-about h1 {
+    margin-bottom: 20px;
+}
+
+#all-about p {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70vw;
+}
+
 /* *</About us> */
 
 /* Profile  */
@@ -645,9 +662,9 @@ footer
 
 .profile-title
 {
-    text-align: center;
-    color: white;
     position: absolute;
+    /* text-align: center; */
+    color: white;
     top: 34%;
     left: 40%;
     padding: 30px;
