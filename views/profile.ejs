@@ -2,43 +2,48 @@
 
   <div class="profile-container">
     <h1 id="tp">Doctor Profile</h1>
-    <img class="profile-img" src="/img/male-doc.png" alt="" srcset="">
+    <img class="profile-img" src=<%= doctor.image %> alt=<%= doctor.name %> >
     <div class="btn-circle blink"></div>
     <div class="content">
-      <h3 class="profile-title"> <b> Dr. Sameer Lohia </b></h3>
+      <h3 class="profile-title"> <b> <%= doctor.name %></b></h3>
       <div class="profile-content">
-        <ul>MBBS, MS, DNB</ul>
-        <ul>Senior Consultant Nephrologist</ul>
-        <ul>Apollo Hospitals</ul>
+        <ul>
+          <% for( degree of doctor.degrees ) { %>
+            <%= degree %>, 
+          <% } %>
+        </ul>
+        <ul><%= doctor.position %></ul>
+        <ul><%= doctor.hospital %></ul>
         <br> <br>
       </div>
       <div class="profile-special">
         <h4>Speciality</h4>
-        <button type="button" class="btn btn-info">Nephrologist</button>
-        <button type="button" class="btn btn-info">Urologist</button>
+        <% for( speciality of doctor.speciality ) { %>
+          <button type="button" class="btn btn-info"><%= speciality %> </button>
+        <% } %>
       </div>
       <div class="profile-exp">
         <h4>Experience</h4>
-        <p>20 years+</p>
+        <p><%= doctor.exp %> </p>
         <h4>Languages</h4>
-        <p>English,Hindi,Bengali,Telegu</p>
+        <p>
+          <% for( language of doctor.languages ) { %>
+            <%= language %> ,
+          <% } %>
+        </p>
         <h4>Contact</h4>
-        <p>+91 9876543210</p>
+        <p><%= doctor.contact %> </p>
         <br>
       </div>
       <div class="profile-doc-about">
-        <h4>About Dr. Sameer Lohia</h4>
+        <h4>About <%= doctor.name %> </h4>
         <img class="profile-ratings" src="/img/rating3.png" alt="">
         <img class="profile-ratings" src="/img/rating3.png" alt="">
         <img class="profile-ratings" src="/img/rating3.png" alt="">
         <img class="profile-ratings" src="/img/rating3.png" alt="">
-        <p> <b> Dr. Sameer Lohia</b> is a board-certified Nephrologist at the Apollo Hospitals,Chennai for the past 7
-          years. He has completed his medical training at Louisiana State University School of Medicine in New
-          Orleans.</p>
-        <p>Patients from all around the state and entire country come to Dr. Sameer Lohia with lots of hope and
-          the doctor ensures that the patients are satisfied with the treatments, with his experience and the techniques
-           he uses as a Nephrologist.</p>
-           <a href="/doctors/someidwhichcomesfromdb/appointment" type="button" class="btn btn-warning">Book Appointment</a>
+        <p> <%= doctor.about %> </p>
+           <a href="./<%= doctor.id %>/appointment" type="button" class="btn btn-warning">Book Appointment</a>
+           <a href="./<%= doctor.id %>/chat" type="button" class="btn btn-primary">Click here to chat</a>
 
       </div>
     </div>

@@ -1,24 +1,33 @@
-const   express     = require('express'),
-        app         = express(),
-        ejsMate     = require('ejs-mate'),
-        path        = require('path'),
-        PORT        = process.env.PORT || 3000;
+require('dotenv').config();
+// can add {path: "path of the dotenv file"} but default it looks for .env
 
-// payment
+const   express         = require('express'),
+        app             = express(),
+        ejsMate         = require('ejs-mate'),
+        path            = require('path'),
+        PUBLISHABLE_KEY = process.env.PUBLISHABLE_KEY,
+        SECRET_KEY      = process.env.SECRET_KEY,
+        stripe          = require('stripe')(SECRET_KEY),
+        server          = require('http').createServer(app),
+        io              = require('socket.io')(server),
+        doctors         = require('./database/doctors'),
+        PORT            = process.env.PORT || 3000;
 
-// const bodyParser = require('body-parser')
-const PUBLISHABLE_KEY= "pk_test_51JBiU5SJBe5jYsGLwOdsjgmSnqR8AKvILaC3k0Op9c5eZK7VzkP79UkMg412bm12iCEd3QUAus5QcIZUHeU5yX7q00H7MKT1vY"
-const SECRET_KEY = "sk_test_51JBiU5SJBe5jYsGLa9klAQPVbX2CYIS62RmnW2kAYqWR6TRXllzs1Iv2yGlszmEx6YRsqzXNqR1xZx74Z5L2tN8I00Zr1kYJlb"
-const stripe =require('stripe')(SECRET_KEY)
 
+// ==================== CHAT SECTION =======================
 
-// app.use(bodyParser.urlencoded({extended:true}))
-// app.use(bodyParser.json())
+io.on('connection', socket => {
+    socket.on('send-message', (data) => {
+        socket.broadcast.emit('recieve-message', data);
+    })
+})
+
+// =========================================================
 
 app.set("view engine","ejs")
 
-require('./db/conn');
-const   Register    = require('./models/signup');
+// require('./db/conn');
+// const   Register    = require('./models/signup');
 
 app.engine('ejs', ejsMate)
 app.set('view engine', 'ejs');
@@ -33,11 +42,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/doctors', (req, res) => {
-    res.render('doctor');
+    res.render('doctor', {doctors});
 });
 
-app.get('/doctors/:doctorID', (req, res) => {
-    res.render('profile');
+app.get('/doctors/:doctorID', async (req, res) => {
+    const {doctorID} = req.params;
+    const doctor = await doctors.find(doctor => doctor.id === doctorID);
+    res.render('profile',{doctor});
 });
 
 app.get('/doctors/:doctorID/appointment', (req, res) => {
@@ -83,12 +94,19 @@ app.get('/doctors/:doctorID/appointment/payment',(req,res)=>
    })
 })
 
+app.get('/doctors/:doctorID/chat', (req,res)=>{
+    res.render('chat');
+})
+
 app.get('/specialities', (req, res) => {
     res.render('specialities');
 });
 
 app.get('/specialities/:specialitiesName', (req, res) => {
-    res.render('speciality');
+    const {specialitiesName} = req.params;
+    const specialityName = specialitiesName.charAt(0).toUpperCase() + specialitiesName.slice(1);
+    const filteredDoctors = doctors.filter(d => d.speciality.includes(specialityName));
+    res.render('speciality', {doctors: filteredDoctors, specialityName});
 });
 
 app.get('/login', (req, res)=> {
@@ -125,18 +143,6 @@ app.post('/signup', async (req, res) => {
         res.status(400).send(e);
     }
 });
-
-/*************************************************************************************************************************/
-app.get('/doctor/availability', (req, res) => {
-    res.send('availability');
-});
-
-app.get('/doctor/:ID', (req, res) => {
-    const id = req.params.ID;
-    res.send(`Lawda doctor ${id}`);
-});
-
-/*************************************************************************************************************************/
 
 app.get('/payment',(req,res)=>
 {
@@ -182,6 +188,6 @@ app.get('*', (req,res) => {
     res.render('error');
 });
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`THE SERVER IS RUNNING ON PORT ${PORT}`);
 });
