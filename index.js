@@ -70,6 +70,7 @@ app.get('/doctors/:doctorID/appointment', (req, res) => {
 app.get('/contactus', (req, res) => {
     res.render('contactus');
 });
+
 app.get('/doctors/:doctorID/appointment/payment',(req,res)=>
 {
    res.render('payment',{
