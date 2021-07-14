@@ -4,115 +4,30 @@
    <h2 class="doctor-title">Doctor List</h2>
 <div class="row row-cols-auto justify-content-center ">
    
-   <div class="card col col-xl-3"  style="width: 18rem;">
-      <img src="/img/female-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"> <b>DR. Amit Sharma</b> </h5>
-         <p class="card-text"><b>Degree:</b>  MBBS,MS <br> <b> Specialist:</b> Hematologist <br> <b>Experience:</b>  14 years of experience and 2 years training in London</p>
+   <% for( let doctor of doctors ) { %>
+   
+      <div class="card col col-xl-3"  style="width: 18rem;">
+         <img src=<%= doctor.image %>  class="card-img-top" alt=<%= doctor.name %> >
+         <div class="card-body">
+            <h5 class="card-title"> <b><%= doctor.name %> </b> </h5>
             <p class="card-text">
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
+               <b>Degree:</b>  
+               <% for( let degree of doctor.degrees) { %>
+                  <%= degree %>, 
+               <% } %> <br> 
+               <b> Specialist:</b> 
+               <% for( let speciality of doctor.speciality) { %>
+                  <%= speciality %>, 
+               <% } %>  
+               <br> 
+               <b>Experience:</b>  <%= doctor.exp %> 
+               <br>
+            <a href="/doctors/<%= doctor.id %>" class="btn btn-primary ">Check Profile</a>
+         </div>
       </div>
-   </div>
+      
+   <% } %>
    
-   <div class="card col col-xl-3"  style="width: 18rem;">
-      <img src="/img/male-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>Dr. Satish Khanna</b></h5>
-         <p class="card-text"><b>Degree:</b>  MBBS,MS <br> <b> Specialist:</b> Hematologist <br> <b>Experience:</b>  14 years of experience and 2 years training in London</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-
-   <div class="card col col-xl-3"  style="width: 18rem;">
-      <img src="/img/male-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>DR. K Meenakshi</b></h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-   
-   <div class="card col col-xl-3"  style="width: 18rem;">
-      <img src="/img/female-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>DR. Rupak Gaur</b></h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-
-   <div class="card col col-xl-3"  style="width: 18rem;">
-      <img src="/img/female-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>DR. Rupak Gaur</b></h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-
-   <div class="card col col-xl-3"  style="width: 18rem;">
-      <img src="/img/female-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>DR. K Meenakshi</b></h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-
-   <div class="card col col-xl-3"  style="width: 18rem;">
-      <img src="/img/female-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>DR. K Meenakshi</b></h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-
-   <div class="card col col-xl-3"  style="width: 18rem;">
-      <img src="/img/female-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>DR. K Meenakshi</b></h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-
-   <div class="card col col-xl-3 col-lg-4 col-md-6 col-sm-12"  style="width: 18rem;">
-      <img src="/img/female-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>DR. K Meenakshi</b></h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-
-   <div class="card col col-xl-3 col-lg-4 col-md-6 col-sm-12"  style="width: 18rem;">
-      <img src="/img/female-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>DR. K Meenakshi</b></h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-
-   <div class="card col col-xl-3 col-lg-4 col-md-6 col-sm-12"  style="width: 18rem;">
-      <img src="/img/female-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>DR. K Meenakshi</b></h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-
-   <div class="card col col-xl-3 col-lg-4 col-md-6 col-sm-12"  style="width: 18rem;">
-      <img src="/img/female-doc.png" class="card-img-top" alt="...">
-      <div class="card-body">
-         <h5 class="card-title"><b>DR. K Meenakshi</b></h5>
-         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-         <a href="/doctors/someidwhichcomesfromdb" class="btn btn-primary ">Book Appointment</a>
-      </div>
-   </div>
-
       
 </div>
 <footer>
