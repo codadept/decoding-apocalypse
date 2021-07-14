@@ -1,5 +1,3 @@
-const e = require('express');
-
 require('dotenv').config();
 // can add {path: "path of the dotenv file"} but default it looks for .env
 
@@ -47,7 +45,7 @@ app.set('views',path.join(__dirname,'views'));
 
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
     res.render('home');
@@ -71,8 +69,7 @@ app.get('/contactus', (req, res) => {
     res.render('contactus');
 });
 
-app.get('/doctors/:doctorID/appointment/payment',(req,res)=>
-{
+app.get('/doctors/:doctorID/appointment/payment',(req,res) => {
    res.render('payment',{
        key: PUBLISHABLE_KEY
    })
@@ -181,11 +178,9 @@ app.post('/login/doctor', async (req, res) => {
     const {username, password} = req.body;
     const doctor = await doctors.find(doctor => doctor.username === username);
     if (doctor && doctor.password == password){
-        console.log('You are logged in!');
         res.redirect(`/doctors/${doctor.id}`);
     }
     else{
-        console.log('Wrong awaz')
         res.redirect('/login/doctor');
     }
 });
