@@ -65,20 +65,20 @@ app.get('/doctors/:doctorID/appointment/payment',(req,res)=>
    })
 })
 
- app.post('/doctors/:doctorID/appointment/payment',(req,res)=>{
-   stripe.customers.create({
-       email:req.body.stripeEmail,
-       source:req.body.stripeToken,
-       name:'TeleMedico',
-       address:{
-           line1: 'Kiron Housing complex, Adabari Tiniali',
-           postal_code : '781012',
-           city: 'Guwahati',
-           state : 'Assam',
-           country: 'India'
-       }
-    
-   })
+app.post('/doctors/:doctorID/appointment/payment',(req,res)=>{
+    stripe.customers.create({
+        email:req.body.stripeEmail,
+        source:req.body.stripeToken,
+        name:'TeleMedico',
+        address:{
+            line1: 'Kiron Housing complex, Adabari Tiniali',
+            postal_code : '781012',
+            city: 'Guwahati',
+            state : 'Assam',
+            country: 'India'
+        }
+
+})
    .then((customer)=>{
        return stripe.charges.create({
            amount:39900,
@@ -112,19 +112,15 @@ app.get('/specialities/:specialitiesName', (req, res) => {
     res.render('speciality', {doctors: filteredDoctors, specialityName});
 });
 
-app.get('/loginAsPat', (req, res)=> {
+app.get('/login/patient', (req, res)=> {
     res.render('loginAsPat');
 });
 
-app.get('/signup', (req, res) => {
+app.get('/signup/patient', (req, res) => {
     res.render('signup');
 });
 
-app.get('/loginAsDoc', (req, res) => {
-    res.render('loginAsDoc');
-});
-
-app.post('/signup', async (req, res) => {
+app.post('/signup/patient', async (req, res) => {
     try {
         const password = req.body.password;
         const cpassword = req.body.confirmpassword;
@@ -136,7 +132,7 @@ app.post('/signup', async (req, res) => {
                 password: req.body.password,
                 confirmpassword: req.body.confirmpassword
             });
-
+            
             const registered = await registerEmployee.save();
             res.status(201).render('login');
         }
@@ -151,45 +147,22 @@ app.post('/signup', async (req, res) => {
     }
 });
 
-app.get('/payment',(req,res)=>
-{
-   res.render('payment',{
-       key: PUBLISHABLE_KEY
-   })
-})
+app.get('/login/doctor', (req, res) => {
+    res.render('loginAsDoc');
+});
 
- app.post('/payment',(req,res)=>{
-   stripe.customers.create({
-       email:req.body.stripeEmail,
-       source:req.body.stripeToken,
-       name:'TeleMedico',
-       address:{
-           line1: 'Kiron Housing complex, Adabari Tiniali',
-           postal_code : '781012',
-           city: 'Guwahati',
-           state : 'Assam',
-           country: 'India'
-       }
-    
-   })
-   .then((customer)=>{
-       return stripe.charges.create({
-           amount:39900,
-           description: 'Consultation Charges',
-           currency: 'INR',
-           customer:customer.id
-       })
-   })
-   .then((charge)=>{
-       console.log(charge)
-       res.redirect("/")
-       
-   })
-   .catch((err)=>{
-       res.send(err)
-   })
-})
-
+app.post('/login/doctor', async (req, res) => {
+    const {username, password} = req.body;
+    const doctor = await doctors.find(doctor => doctor.username === username);
+    if (doctor.password == password){
+        console.log('You are logged in!');
+        res.redirect(`/doctors/${doctor.id}`);
+    }
+    else{
+        console.log('Wrong awaz')
+        res.redirect('/login/doctor');
+    }
+});
 
 app.get('*', (req,res) => {
     res.render('error');
