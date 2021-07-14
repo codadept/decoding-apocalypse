@@ -375,6 +375,8 @@ body {
 	cursor: pointer;
 	padding: 10px 5px;
 	margin: 10px 5px;
+    text-decoration: none;
+    padding-top: 7px;
 }
 
 #msform .action-button:hover, #msform .action-button:focus {
@@ -568,4 +570,260 @@ footer
     color: rgb(20, 173, 220);
 }
 
-/*      */
+/* profile styling  */
+.profile-container
+{
+    /* position: relative;
+    left: 40%; */
+    background-color: #04566e;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.profile-btn
+{
+    position: relative;
+    left: 15%;
+    top: 10%;
+}
+.btn-circle
+{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(34, 219, 49);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: -3%; 
+    top: 20%;   
+}
+/* *<About us> */
+#about-us {
+    text-align: center;
+    min-height: 50vh;
+}
+.connect {
+    position: relative;
+}
+
+.connect img {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.connect  #cntr{
+    position: relative;
+    text-align: center;
+    left: 6.8vw;
+    font-size: 30px;
+}
+
+.connect #cont-cntr {
+    position: absolute;
+    top: 35px;
+    width: 20vw;
+    left: 15vw;
+    font-size: 14px;
+}
+
+.connect #lft {
+    position: relative;
+    left: -21.5vw;
+    font-size: 30px;
+    
+}
+
+.connect #cont-lft {
+    position: absolute;
+    top: 35px;
+    width: 20vw;
+    left: 38.8vw;
+    font-size: 14px;
+}
+
+.connect #rgt {
+    position: relative;
+    left: 20vw;
+    font-size: 30px;
+}
+
+.connect #cont-rgt {
+    position: absolute;
+    top: 35px;
+    width: 20vw;
+    left: 64vw;
+    font-size: 14px;
+}
+
+#all-about {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+#all-about h1 {
+    margin-bottom: 20px;
+}
+
+#all-about p {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70vw;
+}
+
+/* *</About us> */
+
+/* Profile  */
+.profile-container
+{
+    display: inline-block;
+    background-color: #04566e;
+    background-size: cover;
+    padding: 10px;
+}
+
+.profile-img
+
+{   
+    position: relative;
+    display: inline-block;
+    width: 340px;
+    height: 340px;
+    padding: 30px;
+    margin: 30px;
+}
+
+#tp
+{
+    text-align: center;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+.profile-title
+{
+    position: absolute;
+    /* text-align: center; */
+    color: white;
+    top: 32%;
+    left: 40%;
+    padding: 30px;
+} 
+
+.profile-content
+{
+    color: white;
+    position: absolute;
+    top: 42%;
+    left: 40%;
+    line-height: 7px;
+    margin: 12px;
+    padding-top: 7px;
+}
+
+.profile-special
+{
+    color: white;
+    position: absolute;
+    top: 58%;
+    left: 42%;
+}
+
+.profile-exp
+{
+    color: white;
+    position: absolute;
+    top: 74%;
+    left: 42%;
+}
+
+.profile-doc-about
+{
+    
+    color: white;
+    font-size: medium;
+    padding: 20px;
+    margin: 50px;
+    
+}
+
+.btn-circle
+{
+    height: 25px;
+    width: 25px;
+    background-color: rgb(34, 219, 49);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    left: 9%; 
+    top: -15%;   
+}
+.profile-ratings
+{  
+    width: 40px;
+    height: 60px;
+}
+ .blink
+  {
+        animation: blink-animation 1s steps(5, start) infinite;
+        -webkit-animation: blink-animation 1s steps(5, start) infinite;
+      }
+      
+      @keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+      @-webkit-keyframes blink-animation {
+        to {
+          visibility: hidden;
+        }
+      }
+.payment-bg
+{
+    background-image: url("/img/payment.gif");
+    background-size: cover;
+    height: 120vh;
+    width: 98.7vw;
+    background-repeat: no-repeat;
+   
+}
+.payement-title
+{
+    text-align: center;
+    color: rgb(2, 2, 2);
+     font-weight: bold;
+     position: absolute;
+     top: 50%;
+     left: 47%;
+     padding: 15px;
+     font-size: 30px;
+}
+.profile-btn
+{
+    text-decoration: none;
+    color: pink;
+    position: absolute;
+    top: 65%; 
+    left: 62%; 
+    width: 134px;
+}
+
+.blink
+{
+    animation: blink-animation 1s steps(5, start) infinite;
+    -webkit-animation: blink-animation 1s steps(5, start) infinite;
+}
+      
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
