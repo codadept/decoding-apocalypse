@@ -109,12 +109,16 @@ app.get('/specialities/:specialitiesName', (req, res) => {
     res.render('speciality', {doctors: filteredDoctors, specialityName});
 });
 
-app.get('/login', (req, res)=> {
-    res.render('login');
+app.get('/loginAsPat', (req, res)=> {
+    res.render('loginAsPat');
 });
 
 app.get('/signup', (req, res) => {
     res.render('signup');
+});
+
+app.get('/loginAsDoc', (req, res) => {
+    res.render('loginAsDoc');
 });
 
 app.post('/signup', async (req, res) => {
