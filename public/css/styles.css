@@ -827,3 +827,77 @@ footer
         visibility: hidden;
     }
 }
+/* *<About us> */
+#about-us {
+    text-align: center;
+    min-height: 50vh;
+}
+.connect {
+    position: relative;
+}
+
+.connect img {
+    margin-left: 10vw;
+    margin-right: 10vw;
+}
+
+.connect  #cntr{
+    position: relative;
+    text-align: center;
+    left: 6.8vw;
+    font-size: 30px;
+}
+
+.connect #cont-cntr {
+    position: absolute;
+    top: 35px;
+    width: 20vw;
+    left: 15vw;
+    font-size: 14px;
+}
+
+.connect #lft {
+    position: relative;
+    left: -21.5vw;
+    font-size: 30px;
+    
+}
+
+.connect #cont-lft {
+    position: absolute;
+    top: 35px;
+    width: 20vw;
+    left: 38.8vw;
+    font-size: 14px;
+}
+
+.connect #rgt {
+    position: relative;
+    left: 20vw;
+    font-size: 30px;
+}
+
+.connect #cont-rgt {
+    position: absolute;
+    top: 35px;
+    width: 20vw;
+    left: 64vw;
+    font-size: 14px;
+}
+
+#all-about {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 80px;
+}
+
+#all-about h1 {
+    margin-bottom: 20px;
+}
+
+#all-about p {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 70vw;
+}
