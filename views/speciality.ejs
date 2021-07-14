@@ -1,10 +1,8 @@
 <!-- put speciality wise doctors -->
 <% layout('layouts/doctorsbp') %>
 
-<h1>Here speciality wise doctors</h1>
-
 <div class="bg-doctor">
-    <h2 class="doctor-title">Doctor Specialist</h2>
+    <h2 class="doctor-title">Doctors Specialist in <%= specialityName %> </h2>
     <div class="row row-cols-auto justify-content-center ">
 
         <div class="card col col-xl-3" style="width: 18rem;">
@@ -128,5 +126,28 @@
             </div>
         </div>
 
+        <% for( doctor of doctors ) { %>
+        
+            <div class="card col col-xl-3"  style="width: 18rem;">
+                <img src=<%= doctor.image %>  class="card-img-top" alt=<%= doctor.name %> >
+                <div class="card-body">
+                   <h5 class="card-title"> <b><%= doctor.name %> </b> </h5>
+                   <p class="card-text">
+                      <b>Degree:</b>  
+                      <% for( let degree of doctor.degrees) { %>
+                         <%= degree %>, 
+                      <% } %> <br> 
+                      <b> Specialist:</b> 
+                      <% for( let speciality of doctor.speciality) { %>
+                         <%= speciality %>, 
+                      <% } %>  
+                      <br> 
+                      <b>Experience:</b>  <%= doctor.exp %> 
+                      <br>
+                   <a href="/doctors/<%= doctor.id %>" class="btn btn-primary ">Check Profile</a>
+                </div>
+             </div>
+
+        <% } %>
 
     </div>
