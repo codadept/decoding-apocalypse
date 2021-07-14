@@ -10,6 +10,7 @@ const   express         = require('express'),
         stripe          = require('stripe')(SECRET_KEY),
         server          = require('http').createServer(app),
         io              = require('socket.io')(server),
+        doctors         = require('./database/doctors'),
         PORT            = process.env.PORT || 3000;
 
 
@@ -41,11 +42,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/doctors', (req, res) => {
-    res.render('doctor');
+    res.render('doctor', {doctors});
 });
 
-app.get('/doctors/:doctorID', (req, res) => {
-    res.render('profile');
+app.get('/doctors/:doctorID', async (req, res) => {
+    const {doctorID} = req.params;
+    const doctor = await doctors.find(doctor => doctor.id === doctorID);
+    res.render('profile',{doctor});
 });
 
 app.get('/doctors/:doctorID/appointment', (req, res) => {
@@ -100,7 +103,10 @@ app.get('/specialities', (req, res) => {
 });
 
 app.get('/specialities/:specialitiesName', (req, res) => {
-    res.render('speciality');
+    const {specialitiesName} = req.params;
+    const specialityName = specialitiesName.charAt(0).toUpperCase() + specialitiesName.slice(1);
+    const filteredDoctors = doctors.filter(d => d.speciality.includes(specialityName));
+    res.render('speciality', {doctors: filteredDoctors, specialityName});
 });
 
 app.get('/login', (req, res)=> {
