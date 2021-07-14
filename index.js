@@ -11,14 +11,24 @@ const   express         = require('express'),
         server          = require('http').createServer(app),
         io              = require('socket.io')(server),
         doctors         = require('./database/doctors'),
+        users           = require('./database/users'),
         PORT            = process.env.PORT || 3000;
 
 
 // ==================== CHAT SECTION =======================
 
 io.on('connection', socket => {
-    socket.on('send-message', (data) => {
-        socket.broadcast.emit('recieve-message', data);
+    socket.on('send-message', (data, id) => {
+        if(id === ""){
+            socket.broadcast.emit('recieve-message', data);
+        }
+        else{
+            socket.to(id).emit('recieve-message', data);
+        }
+    })
+
+    socket.on('join-room', id => {
+        socket.join(id);
     })
 })
 
@@ -35,7 +45,7 @@ app.set('views',path.join(__dirname,'views'));
 
 app.use(express.static(path.join(__dirname,'public')));
 app.use(express.json());
-app.use(express.urlencoded({extended: false}));
+app.use(express.urlencoded({extended: true}));
 
 app.get('/', (req, res) => {
     res.render('home');
@@ -59,8 +69,7 @@ app.get('/contactus', (req, res) => {
     res.render('contactus');
 });
 
-app.get('/doctors/:doctorID/appointment/payment',(req,res)=>
-{
+app.get('/doctors/:doctorID/appointment/payment',(req,res) => {
    res.render('payment',{
        key: PUBLISHABLE_KEY
    })
@@ -98,8 +107,10 @@ app.post('/doctors/:doctorID/appointment/payment',(req,res)=>{
    })
 })
 
-app.get('/doctors/:doctorID/chat', (req,res)=>{
-    res.render('chat');
+app.get('/doctors/:doctorID/chat', async (req,res)=>{
+    const {doctorID} = req.params;
+    const doctor = await doctors.find(doctor => doctor.id === doctorID);
+    res.render('chat', {doctor});
 })
 
 app.get('/specialities', (req, res) => {
@@ -115,6 +126,17 @@ app.get('/specialities/:specialitiesName', (req, res) => {
 
 app.get('/login/patient', (req, res)=> {
     res.render('loginAsPat');
+});
+
+app.post('/login/patient', async (req, res)=> {
+    const {email, password} = req.body;
+    const user = await users.find(user => user.email === email);
+    if(user && user.password == password){
+        res.redirect('/doctors');
+    }
+    else{
+        res.redirect('/login/patient');
+    }
 });
 
 app.get('/signup/patient', (req, res) => {
@@ -155,12 +177,10 @@ app.get('/login/doctor', (req, res) => {
 app.post('/login/doctor', async (req, res) => {
     const {username, password} = req.body;
     const doctor = await doctors.find(doctor => doctor.username === username);
-    if (doctor.password == password){
-        console.log('You are logged in!');
+    if (doctor && doctor.password == password){
         res.redirect(`/doctors/${doctor.id}`);
     }
     else{
-        console.log('Wrong awaz')
         res.redirect('/login/doctor');
     }
 });
