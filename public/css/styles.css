@@ -517,15 +517,21 @@ footer
 /* Specialities Carousel */
 
 .carousel-item{
-    height: 70vh;
+    height: 80vh;
+    background-color: rgb(46, 45, 45);
+}
+
+.cimg{
+
 }
 
 .speciality-first-slide{
-    background-color: #FC5185;
+    background-color: #364F6B;
+    
 }
 
 .speciality-second-slide{
-    background-color: #3FC1C9;
+    background-color: #364F6B;
 }
 
 .speciality-third-slide{
@@ -550,16 +556,37 @@ footer
 
 /*  */
 
-      
+.carousel-caption > h2{
+    color: rgb(255, 255, 255);
+    font-size:25px;
+}
+
+.speci-bg{
+    background-image: linear-gradient(#ff97b6,#9c1c43);
+}
+
+.specialities-section-text{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 30px;
+    color: #fff;
+    
+}
+
 .speciality-cards{
-    padding: 80px;
+    margin-left:60px;
+    padding: auto;
     height: max-content;
 }
 
+.cimg{
+    filter: opacity(50%);
+}
+
 .boxes{
-    width: 300px;
+    width: 260px;
     padding: 60px;
-    margin: 30px;
+    margin: 20px;
     height: 300px;
     display: inline-block;
     background-image: linear-gradient(#38bebe,#2a9ce7);
