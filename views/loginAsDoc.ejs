@@ -13,14 +13,14 @@
 <body class="d-flex flex-column vh-100 log-body"> 
     <div class="login-box">
         <h2>Login as a Doctor</h2>
-        <form action="" class="form">
+        <form action="/login/doctor" method="POST" class="form">
           <div class="user-box">
-            <input class="input" type="text" id="" required="">
+            <input class="input" name="username" type="text" id="" required="">
             <label class="label" for="">Username</label>
           </div>
           <!-- /.user-box -->
           <div class="user-box">
-            <input class="input" type="password" id="" required="">
+            <input class="input" name="password" type="password" id="" required="">
             <label class="label" for="">Password</label>
           </div>
           <!-- /.user-box -->
@@ -33,10 +33,10 @@
           </button>
         </form>
         <hr>
-        <p>Didn't have an account? <a href="/signup">Sign up</a></p>
+        <p>Didn't have an account? <a href="/signup/doctor">Sign up</a></p>
         <p style="text-align: center;">OR</p>
         <!-- <hr> -->
-        <a href="/loginAsPat">Log In as Patient</a>
+        <a href="/login/patient">Log In as Patient</a>
         <!-- /form -->
     </div>
     <!-- /.login-box -->
