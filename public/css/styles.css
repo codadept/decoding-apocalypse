@@ -4,7 +4,7 @@
     margin: 0;
     border: 0;
     box-sizing: border-box;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 } 
 
 /* ! <NAVBAR> */
@@ -313,17 +313,18 @@
 
 .appointment 
 {
-    min-height: 120vh;
+    min-height: 105vh;
 	background-image: url(/img/appointment.gif);
     background-size: cover;
-    background-repeat: no-repeat;      
+    background-repeat: no-repeat;
+    background-position: center;   
 }
   
 .appointment-bg
 {
-    position: relative;
+    position: relative !important;
     left: 20%;
-    top: 8%;
+    top: 20vh;
 }
 
 body {
@@ -641,9 +642,10 @@ footer
     background-color: rgb(34, 219, 49);
     border-radius: 50%;
     display: inline-block;
-    position: relative;
-    left: -3%; 
-    top: 20%;   
+    position: absolute;
+    top: -20vh !important;
+    left: 9%;
+    
 }
 /* *<About us> */
 #about-us {
@@ -789,12 +791,10 @@ footer
 
 .profile-doc-about
 {
-    
     color: white;
     font-size: medium;
     padding: 20px;
     margin: 50px;
-    
 }
 
 .btn-circle
@@ -829,13 +829,14 @@ footer
           visibility: hidden;
         }
       }
+/* payment */
 .payment-bg
 {
     background-image: url("/img/payment.gif");
     background-size: cover;
-    height: 120vh;
-    width: 98.7vw;
-    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    /* background-repeat: no-repeat; */
    
 }
 .payement-title
@@ -849,6 +850,7 @@ footer
      padding: 15px;
      font-size: 30px;
 }
+/* profile */
 .profile-btn
 {
     text-decoration: none;
