@@ -312,18 +312,19 @@
 * {margin: 0; padding: 0;}
 
 .appointment 
-{   
-    min-height: 100vh;
+{
+    min-height: 105vh;
 	background-image: url(/img/appointment.gif);
     background-size: cover;
-    background-repeat: no-repeat;      
+    background-repeat: no-repeat;
+    background-position: center;   
 }
   
 .appointment-bg
 {
     position: relative !important;
     left: 20%;
-    top: 5vh;
+    top: 20vh;
 }
 
 body {
