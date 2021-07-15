@@ -757,12 +757,10 @@ footer
 
 .profile-doc-about
 {
-    
     color: white;
     font-size: medium;
     padding: 20px;
     margin: 50px;
-    
 }
 
 .btn-circle
@@ -797,6 +795,7 @@ footer
           visibility: hidden;
         }
       }
+/* payment */
 .payment-bg
 {
     background-image: url("/img/payment.gif");
@@ -817,6 +816,7 @@ footer
      padding: 15px;
      font-size: 30px;
 }
+/* profile */
 .profile-btn
 {
     text-decoration: none;
