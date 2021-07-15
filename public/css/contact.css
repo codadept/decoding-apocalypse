@@ -8,6 +8,13 @@
     left: -15%;
 }
 
+.contact .contact-jumbotron a {
+    position: relative;
+    color: white;
+    font-size: 30px;
+    left: -10vw;
+}
+
 .contact .contact-jumbotron img {
     position: absolute;
     right: 0px;
