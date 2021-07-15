@@ -3,6 +3,8 @@ const {v4:uuid} = require('uuid');
 const doctors = [
     {
         id: uuid(),
+        username: 'sameerlohia',
+        password: 'pw1',
         name: "Dr. Sameer Lohia",
         degrees : ["MBBS", "MS", "DNB"],
         position: "Senior Consultant Nephrology",
@@ -18,6 +20,8 @@ const doctors = [
     },
     {
         id: uuid(),
+        username: 'satishkhanna',
+        password: 'pw2',
         name: "Dr. Satish Khanna",
         degrees : ["MBBS", "MS"],
         position: "Senior Consultant Dermatologist",
@@ -33,6 +37,8 @@ const doctors = [
     },
     {
         id: uuid(),
+        username: 'meenakshi',
+        password: 'pw3',
         name: "Dr. K. Meenakshi",
         degrees : ["MBBS", "MS", "BDS"],
         position: "Head Dermatologist",
@@ -48,6 +54,8 @@ const doctors = [
     },
     {
         id: uuid(),
+        username: 'rupakgaur',
+        password: 'pw4',
         name: "Dr. Rupak Gaur",
         degrees : ["MBBS", "MS", "BPT"],
         position: "Senior Consultant Gynecologist",
@@ -63,6 +71,8 @@ const doctors = [
     },
     {
         id: uuid(),
+        username: 'hanuradha',
+        password: 'pw5',
         name: "Dr. H. Anuradha",
         degrees : ["MBBS", "BAMS", "DNB"],
         position: "Head Gastroenterologist",
@@ -78,6 +88,8 @@ const doctors = [
     },
     {
         id: uuid(),
+        username: 'anjanbarkataky',
+        password: 'pw6',
         name: "Dr. Anjan Barkataky",
         degrees : ["MBBS", "MS", "DM"],
         position: "Senior Consultant Nephrology",
@@ -93,6 +105,8 @@ const doctors = [
     },
     {
         id: uuid(),
+        username: 'chandrasekhar',
+        password: 'pw7',
         name: "Dr. Chandrasekhar",
         degrees : ["MBBS", "MS", "DNB"],
         position: "Senior Consultant Nephrology",
@@ -108,6 +122,8 @@ const doctors = [
     },
     {
         id: uuid(),
+        username: 'sunilprakash',
+        password: 'pw8',
         name: "Dr. Sunil Prakash",
         degrees : ["MBBS", "MS", "DNB"],
         position: "Senior Consultant Nephrology",

@@ -12,11 +12,11 @@
 </head>
 <body class="d-flex flex-column vh-100 log-body"> 
     <div class="login-box">
-        <h2>Login</h2>
+        <h2>Login as a Patient</h2>
         <form action="" class="form">
           <div class="user-box">
-            <input class="input" type="text" id="" required="">
-            <label class="label" for="">Username</label>
+            <input class="input" type="email" id="" required="">
+            <label class="label" for="">Email</label>
           </div>
           <!-- /.user-box -->
           <div class="user-box">
@@ -33,7 +33,10 @@
           </button>
         </form>
         <hr>
-        <p>Didn't have an account? <a href="/signup">Sign up</a></p>
+        <p>Didn't have an account? <a href="/signup/patient">Sign up</a></p>
+        <p style="text-align: center;">OR</p>
+        <!-- <hr> -->
+        <a href="/login/doctor">Log In as Doctor</a>
         <!-- /form -->
     </div>
     <!-- /.login-box -->
