@@ -586,6 +586,11 @@ footer
     color: rgb(20, 173, 220);
 }
 
+/*      */
+.fotter-bg-img{
+        background-color: #ff0c54;
+
+}
 /* profile styling  */
 .profile-container
 {

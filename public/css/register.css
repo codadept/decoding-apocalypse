@@ -32,11 +32,13 @@
     color: white;
 }
   
-.login-box p a{
+.login-box a{
     color: #03e9f4;
-    padding: 10px 20px;
+    padding: 5px 10px;
+    text-decoration: none;
     transition: all 0.3s;
 }
+
 .login-box .user-box {
     position: relative;
 }

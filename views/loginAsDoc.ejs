@@ -12,40 +12,31 @@
 </head>
 <body class="d-flex flex-column vh-100 log-body"> 
     <div class="login-box">
-        <h2>Sign Up</h2>
-        <form action="/signup" method="POST" class="form">
+        <h2>Login as a Doctor</h2>
+        <form action="/login/doctor" method="POST" class="form">
           <div class="user-box">
-            <input class="input" type="text" id="" required="" name="username">
+            <input class="input" name="username" type="text" id="" required="">
             <label class="label" for="">Username</label>
           </div>
-          <div class="user-box">
-            <input class="input" type="email" id="" required="" name="email">
-            <label class="label" for="">Email</label>
-          </div>
-          <div class="user-box">
-            <input class="input" type="number" id="" required="" name="age">
-            <label class="label" for="">Age</label>
-          </div>
           <!-- /.user-box -->
           <div class="user-box">
-            <input class="input" type="password" id="" required="" name="password">
+            <input class="input" name="password" type="password" id="" required="">
             <label class="label" for="">Password</label>
           </div>
-          <div class="user-box">
-            <input class="input" type="password" id="" required="" name="confirmpassword">
-            <label class="label" for="">Confirm Password</label>
-          </div>
           <!-- /.user-box -->
-          <button type="submit" value="signup">
+          <button type="submit">
             <span></span>
             <span></span>
             <span></span>
             <span></span>
-            <p>Sign Up</p>
+            <p>Log In</p>
           </button>
         </form>
         <hr>
-        <p>Already have an account <a href="/login/patient">Log In</a></p>
+        <p>Didn't have an account? <a href="/signup/doctor">Sign up</a></p>
+        <p style="text-align: center;">OR</p>
+        <!-- <hr> -->
+        <a href="/login/patient">Log In as Patient</a>
         <!-- /form -->
     </div>
     <!-- /.login-box -->

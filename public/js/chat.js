@@ -9,7 +9,9 @@ const chatMsgBody = document.querySelector('.chat-messages-body');
 if(dir == 'chat'){
     const socket = io();
     socket.on('connect', ()=>{
-        sendConnectMessage()
+        sendConnectMessage(name)
+
+        socket.emit('join-room', id)
 
         // send message when click on send btn
         chatForm.addEventListener('submit', (e)=> {
@@ -18,7 +20,7 @@ if(dir == 'chat'){
                 message: chatInput.value,
                 sender: 'You'
             }
-            socket.emit('send-message', {...data});  
+            socket.emit('send-message', {...data}, id);  
             displayMsg(data, 'right');
             chatInput.value="";
         })
@@ -30,11 +32,11 @@ if(dir == 'chat'){
     })
 }
 
-const sendConnectMessage = () => {
+const sendConnectMessage = (name) => {
     const connectedMsgDiv = document.createElement('div');
     connectedMsgDiv.classList.add('message-info');
     const message = document.createElement('p');
-    message.innerText = 'You are connected to the chat section';
+    message.innerText = `You are connected to the chat section with ${name}`;
     connectedMsgDiv.appendChild(message);
     chatMsgBody.appendChild(connectedMsgDiv);
 }
